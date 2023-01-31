@@ -1,0 +1,218 @@
+p cnf 76 141
+c 1 BerkeleyDb
+c 2 BerkeleyDB
+c 3 FPersistency
+c 4 Persistency
+c 5 FIOFeature
+c 6 NIO
+c 7 IO
+c 8 FNIOType
+c 9 featureNIO
+c 10 featureChunkedNIO
+c 11 featureDirectNIO
+c 12 featureIO
+c 13 featureSynchronizedIO
+c 14 FPersistencyFeatures
+c 15 featureChecksum
+c 16 featureFileHandleCache
+c 17 featureHandleFullDiscError
+c 18 featureEnvironmentLock
+c 19 Checkpointer
+c 20 Cleaner
+c 21 featureCustomizableCheckpointerTime
+c 22 featureCustomizableCheckpointerBytes
+c 23 featureCheckpointerDaemon
+c 24 featureLookAheadCache
+c 25 featureCleanerDaemon
+c 26 FBtree
+c 27 BTree
+c 28 featureVerifier
+c 29 featureTreeVisitor
+c 30 featureINCompressor
+c 31 FEvictor
+c 32 Evictor
+c 33 featureEvictor
+c 34 featureCriticalEviction
+c 35 featureEvictorDaemon
+c 36 BASE
+c 37 FLogging
+c 38 Logging
+c 39 featureLoggingBase
+c 40 featureLoggingFile
+c 41 featureLoggingConsole
+c 42 featureLoggingDbLog
+c 43 featureLoggingFinest
+c 44 featureLoggingFiner
+c 45 featureLoggingFine
+c 46 featureLoggingInfo
+c 47 featureLoggingConfig
+c 48 featureLoggingSevere
+c 49 FStatistics
+c 50 Statistics
+c 51 FStatisticsFeatures
+c 52 EnvStats
+c 53 featureStatisticsDatabase
+c 54 featureStatisticsLock
+c 55 featureStatisticsPreload
+c 56 featureStatisticsSequence
+c 57 featureStatisticsTransaction
+c 58 featureStatisticsEnvBase
+c 59 featureStatisticsEnvLog
+c 60 featureStatisticsEnvINCompressor
+c 61 featureStatisticsEnvFSync
+c 62 featureStatisticsEnvEvictor
+c 63 featureStatisticsEnvCleaner
+c 64 featureStatisticsEnvCheckpointer
+c 65 featureStatisticsEnvCaching
+c 66 featureStatisticsBase
+c 67 featureMemoryBudget
+c 68 FConcurrency
+c 69 featureLatch
+c 70 featureFSync
+c 71 featureTransaction
+c 72 dummyFeatureLocking
+c 73 featureCheckLeaks
+c 74 FDbOperation
+c 75 featureDeleteDb
+c 76 featureTruncateDb
+1
+-2 1
+-2 3
+-3 2
+-4 3
+-4 5
+-5 4
+-5 6 7
+-6 -7
+-6 5
+-7 5
+-6 8
+-8 6
+-8 9 10
+-9 -10
+-9 8
+-10 8
+-11 6
+-7 12
+-12 7
+-13 7
+-14 4
+-14 15 16 17 18 19 20
+-15 14
+-16 14
+-17 14
+-18 14
+-19 14
+-20 14
+-21 19
+-22 19
+-23 19
+-24 20
+-25 20
+-2 26
+-26 2
+-27 26
+-28 27
+-29 27
+-30 27
+-31 27
+-32 31
+-32 33
+-33 32
+-34 32
+-35 32
+-2 36
+-36 2
+-37 2
+-38 37
+-38 39
+-39 38
+-40 38
+-41 38
+-42 38
+-43 38
+-44 38
+-45 38
+-46 38
+-47 38
+-48 38
+-49 2
+-50 49
+-50 51
+-51 50
+-51 52 53 54 55 56 57
+-52 51
+-53 51
+-54 51
+-55 51
+-56 51
+-57 51
+-52 58
+-58 52
+-59 52
+-60 52
+-61 52
+-62 52
+-63 52
+-64 52
+-65 52
+-50 66
+-66 50
+-67 2
+-68 2
+-68 69 70 71 72 73
+-69 68
+-70 68
+-71 68
+-72 68
+-73 68
+-74 2
+-74 75 76
+-75 74
+-76 74
+-33 67
+-35 67
+-24 67
+-65 67
+-73 54
+-34 30
+-22 21
+-75 72
+-75 33
+-75 30
+-75 67
+-69 72
+-69 73
+-69 75
+-69 33
+-69 16
+-69 70
+-69 30
+-69 67
+-69 54
+-69 29
+-69 76
+-69 28
+-48 18
+-45 72
+-45 33
+-45 30
+-46 15
+-46 67
+-39 71
+-43 71
+-67 33
+-67 69
+-54 72
+-57 72
+-62 33
+-61 70
+-60 30
+-57 71
+-53 29
+-71 72
+-71 75
+-71 76
+-76 75
+-28 30
+-28 29
