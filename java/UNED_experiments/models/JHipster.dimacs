@@ -1,0 +1,150 @@
+p cnf 45 104
+c 1 JHipster
+c 2 Generator
+c 3 Server
+c 4 Application
+c 5 MicroserviceApplication
+c 6 UaaServer
+c 7 MicroserviceGateway
+c 8 Monolithic
+c 9 Authentication
+c 10 HTTPSession
+c 11 OAuth2
+c 12 Uaa
+c 13 JWT
+c 14 SocialLogin
+c 15 Database
+c 16 SQL
+c 17 Cassandra
+c 18 MongoDB
+c 19 Hibernate2ndLvlCache
+c 20 HazelCast
+c 21 EhCache
+c 22 Development
+c 23 H2
+c 24 PostgreSQLDev
+c 25 MariaDBDev
+c 26 MySql
+c 27 DiskBased
+c 28 InMemory
+c 29 Production
+c 30 MySQL
+c 31 MariaDB
+c 32 PostgreSQL
+c 33 ElasticSearch
+c 34 SpringWebSockets
+c 35 Libsass
+c 36 ClusteredSession
+c 37 BackEnd
+c 38 Gradle
+c 39 Maven
+c 40 InternationalizationSupport
+c 41 Docker
+c 42 TestingFrameworks
+c 43 Protractor
+c 44 Gatling
+c 45 Cucumber
+1 0
+-1 2 0
+-2 1 0
+-2 3 4 0
+-3 -4 0
+-3 2 0
+-4 2 0
+-3 5 6 0
+-5 -6 0
+-5 3 0
+-6 3 0
+-4 7 8 0
+-7 -8 0
+-7 4 0
+-8 4 0
+-1 9 0
+-9 1 0
+-9 10 11 12 13 0
+-10 -11 0
+-10 -12 0
+-10 -13 0
+-10 9 0
+-11 -12 0
+-11 -13 0
+-11 9 0
+-12 -13 0
+-12 9 0
+-13 9 0
+-14 1 0
+-15 1 0
+-15 16 17 18 0
+-16 -17 0
+-16 -18 0
+-16 15 0
+-17 -18 0
+-17 15 0
+-18 15 0
+-19 16 0
+-19 20 21 0
+-20 -21 0
+-20 19 0
+-21 19 0
+-16 22 0
+-22 16 0
+-22 23 24 25 26 0
+-23 -24 0
+-23 -25 0
+-23 -26 0
+-23 22 0
+-24 -25 0
+-24 -26 0
+-24 22 0
+-25 -26 0
+-25 22 0
+-26 22 0
+-23 27 28 0
+-27 -28 0
+-27 23 0
+-28 23 0
+-16 29 0
+-29 16 0
+-29 30 31 32 0
+-30 -31 0
+-30 -32 0
+-30 29 0
+-31 -32 0
+-31 29 0
+-32 29 0
+-33 16 0
+-34 1 0
+-35 1 0
+-36 1 0
+-1 37 0
+-37 1 0
+-37 38 39 0
+-38 -39 0
+-38 37 0
+-39 37 0
+-40 1 0
+-41 1 0
+-1 42 0
+-42 1 0
+-43 42 0
+-42 44 0
+-44 42 0
+-42 45 0
+-45 42 0
+-11 14 5 16 18 0
+-14 10 13 0
+-14 8 0
+-14 16 18 0
+-6 12 0
+11 14 5 16 18 17 0
+-3 -43 0
+3 43 0
+-30 23 26 0
+-5 13 12 0
+-7 13 12 0
+-8 13 10 11 0
+-31 23 25 0
+-32 23 24 0
+-34 4 0
+-36 4 0
+-35 4 0

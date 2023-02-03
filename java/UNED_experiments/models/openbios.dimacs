@@ -1,0 +1,8 @@
+p cnf 5 2
+c        1 boolean_X86
+c        2 boolean_LITTLE_ENDIAN
+c        3 boolean_IMAGE_ELF_MULTIBOOT
+c        4 boolean_IMAGE_ELF_EMBEDDED
+c        5 boolean_IMAGE_ELF
+3 0
+2 0

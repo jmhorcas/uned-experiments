@@ -1,0 +1,957 @@
+p cnf 416 540
+c        1 boolean_ZYNQ_DEVCFG
+c        2 boolean_REGISTER
+c        3 boolean_XLNX_ZYNQMP
+c        4 boolean_XILINX_SPIPS
+c        5 boolean_XILINX_SPI
+c        6 boolean_XILINX_ETHLITE
+c        7 boolean_XILINX_AXI
+c        8 boolean_XILINX
+c        9 boolean_XICS_KVM
+c       10 boolean_XICS
+c       11 boolean_XICS_SPAPR
+c       12 boolean_XGMAC
+c       13 boolean_XEN_IGD_PASSTHROUGH
+c       14 boolean_XEN
+c       15 boolean_X11
+c       16 boolean_WDT_IMX2
+c       17 boolean_WDT_DIAG288
+c       18 boolean_VT82C686
+c       19 boolean_VIRTIO_PMEM
+c       20 boolean_VIRTIO_PMEM_SUPPORTED
+c       21 boolean_VIRTIO_MMIO
+c       22 boolean_VIRTIO_MEM
+c       23 boolean_VIRTIO_MEM_SUPPORTED
+c       24 boolean_VIRTIO_BALLOON
+c       25 boolean_VIRTIO_BLK
+c       26 boolean_VIRTIO_CRYPTO
+c       27 boolean_VHOST_USER_VGA
+c       28 boolean_VHOST_USER_GPU
+c       29 boolean_VIRTIO_GPU
+c       30 boolean_VHOST_USER_INPUT
+c       31 boolean_VIRTIO_INPUT_HOST
+c       32 boolean_VIRTIO_INPUT
+c       33 boolean_VIRTIO_IOMMU
+c       34 boolean_VIRTIO_NET
+c       35 boolean_VIRTIO_RNG
+c       36 boolean_VIRTIO_SCSI
+c       37 boolean_VIRTIO_SERIAL
+c       38 boolean_VIRTIO
+c       39 boolean_VIRTIO_CCW
+c       40 boolean_9PFS
+c       41 boolean_FSDEV_9P
+c       42 boolean_VIRTIO_9P
+c       43 boolean_VIRTFS
+c       44 boolean_VHOST_VDPA
+c       45 boolean_VHOST_USER_BLK
+c       46 boolean_VHOST_USER_SCSI
+c       47 boolean_VHOST_USER
+c       48 boolean_VHOST
+c       49 boolean_VHOST_KERNEL
+c       50 boolean_VGA_ISA_MM
+c       51 boolean_VFIO_CCW
+c       52 boolean_VFIO
+c       53 boolean_VFIO_AP
+c       54 boolean_VERSATILE_PCI
+c       55 boolean_BITBANG_I2C
+c       56 boolean_VERSATILE_I2C
+c       57 boolean_IMX_USBPHY
+c       58 boolean_USB_AUDIO
+c       59 boolean_USB_NETWORK
+c       60 boolean_USB_SERIAL
+c       61 boolean_USB_SMARTCARD
+c       62 boolean_USB_STORAGE_BOT
+c       63 boolean_USB_STORAGE_MTP
+c       64 boolean_USB_STORAGE_UAS
+c       65 boolean_USB_TABLET_WACOM
+c       66 boolean_USB_U2F
+c       67 boolean_USB
+c       68 boolean_USB_DWC2
+c       69 boolean_DEC_PCI
+c       70 boolean_OPENPIC_KVM
+c       71 boolean_OPENPIC
+c       72 boolean_UNIN_PCI
+c       73 boolean_TZ_PPC
+c       74 boolean_TZ_MSC
+c       75 boolean_TZ_MPC
+c       76 boolean_USB_MUSB
+c       77 boolean_TUSB6010
+c       78 boolean_TSC210X
+c       79 boolean_TSC2005
+c       80 boolean_TPM_SPAPR
+c       81 boolean_TPM_EMULATOR
+c       82 boolean_TPM_PASSTHROUGH
+c       83 boolean_TPM_BACKEND
+c       84 boolean_TPM_CRB
+c       85 boolean_TPM_TIS_SYSBUS
+c       86 boolean_TPM_TIS
+c       87 boolean_TPM_TIS_ISA
+c       88 boolean_TPM
+c       89 boolean_EDU
+c       90 boolean_ISA_TESTDEV
+c       91 boolean_PCI_TESTDEV
+c       92 boolean_TEST_DEVICES
+c       93 boolean_TERMINAL3270
+c       94 boolean_TCX
+c       95 boolean_TCG
+c       96 boolean_SWIM
+c       97 boolean_SUNHME
+c       98 boolean_SUN4V_RTC
+c       99 boolean_STP2000
+c      100 boolean_STM32F4XX_SYSCFG
+c      101 boolean_STM32F4XX_EXTI
+c      102 boolean_STM32F2XX_USART
+c      103 boolean_STM32F2XX_TIMER
+c      104 boolean_STM32F2XX_SYSCFG
+c      105 boolean_STM32F2XX_SPI
+c      106 boolean_STM32F2XX_ADC
+c      107 boolean_STELLARIS_INPUT
+c      108 boolean_STELLARIS_ENET
+c      109 boolean_SSI_M25P80
+c      110 boolean_SSD0323
+c      111 boolean_SPLIT_IRQ
+c      112 boolean_VGA
+c      113 boolean_QXL
+c      114 boolean_SPICE
+c      115 boolean_SPAPR_VSCSI
+c      116 boolean_SMC91C111
+c      117 boolean_ADLIB
+c      118 boolean_APPLESMC
+c      119 boolean_CS4231A
+c      120 boolean_GUS
+c      121 boolean_ISA_DEBUG
+c      122 boolean_ISA_IPMI_BT
+c      123 boolean_ISA_IPMI_KCS
+c      124 boolean_NE2000_COMMON
+c      125 boolean_NE2000_ISA
+c      126 boolean_PVPANIC
+c      127 boolean_SB16
+c      128 boolean_SGA
+c      129 boolean_VGA_ISA
+c      130 boolean_WDT_IB700
+c      131 boolean_ISA_BUS
+c      132 boolean_FDC
+c      133 boolean_PCKBD
+c      134 boolean_ISA_SUPERIO
+c      135 boolean_PARALLEL
+c      136 boolean_SERIAL
+c      137 boolean_SERIAL_ISA
+c      138 boolean_SMC37C669
+c      139 boolean_SMBUS_EEPROM
+c      140 boolean_SMBIOS
+c      141 boolean_SM501
+c      142 boolean_SIMBA
+c      143 boolean_SIFIVE_U_PRCI
+c      144 boolean_SIFIVE_U_OTP
+c      145 boolean_SIFIVE_UART
+c      146 boolean_SIFIVE_TEST
+c      147 boolean_SIFIVE_PLIC
+c      148 boolean_SIFIVE_PDMA
+c      149 boolean_SIFIVE_GPIO
+c      150 boolean_SIFIVE_E_PRCI
+c      151 boolean_SIFIVE_CLINT
+c      152 boolean_SEMIHOSTING
+c      153 boolean_SCLPCONSOLE
+c      154 boolean_S390_FLIC_KVM
+c      155 boolean_S390_FLIC
+c      156 boolean_RX_ICU
+c      157 boolean_RENESAS_TMR
+c      158 boolean_RENESAS_SCI
+c      159 boolean_RENESAS_CMT
+c      160 boolean_RC4030
+c      161 boolean_PXB
+c      162 boolean_VMW_PVRDMA
+c      163 boolean_PVRDMA
+c      164 boolean_OR_IRQ
+c      165 boolean_PREP_PCI
+c      166 boolean_PPCE500_PCI
+c      167 boolean_VFIO_AMD_XGBE
+c      168 boolean_VFIO_XGMAC
+c      169 boolean_VFIO_PLATFORM
+c      170 boolean_PLATFORM_BUS
+c      171 boolean_PL330
+c      172 boolean_PL310
+c      173 boolean_PL190
+c      174 boolean_SD
+c      175 boolean_PL181
+c      176 boolean_PL110
+c      177 boolean_PL080
+c      178 boolean_PL061
+c      179 boolean_PL050
+c      180 boolean_PL041
+c      181 boolean_PL031
+c      182 boolean_SSI_SD
+c      183 boolean_SSI
+c      184 boolean_PL022
+c      185 boolean_PL011
+c      186 boolean_USB_UHCI
+c      187 boolean_PIIX4
+c      188 boolean_PIIX3
+c      189 boolean_PFLASH_CFI02
+c      190 boolean_PFLASH_CFI01
+c      191 boolean_PCMCIA
+c      192 boolean_PCI_SABRE
+c      193 boolean_PCI_I440FX
+c      194 boolean_PCI_EXPRESS_XILINX
+c      195 boolean_PAM
+c      196 boolean_PCI_EXPRESS_Q35
+c      197 boolean_I82801B11
+c      198 boolean_E1000E_PCI_EXPRESS
+c      199 boolean_IOH3420
+c      200 boolean_PCIE_PORT
+c      201 boolean_XIO3130
+c      202 boolean_PCI_EXPRESS
+c      203 boolean_PCI_EXPRESS_GENERIC_BRIDGE
+c      204 boolean_PCI_EXPRESS_DESIGNWARE
+c      205 boolean_CAN_BUS
+c      206 boolean_CAN_CTUCANFD_PCI
+c      207 boolean_CAN_CTUCANFD
+c      208 boolean_CAN_PCI
+c      209 boolean_CAN_SJA1000
+c      210 boolean_USB_EHCI
+c      211 boolean_USB_EHCI_PCI
+c      212 boolean_AC97
+c      213 boolean_IDE_QDEV
+c      214 boolean_AHCI
+c      215 boolean_AHCI_ICH9
+c      216 boolean_ATI_VGA
+c      217 boolean_BOCHS_DISPLAY
+c      218 boolean_E1000_PCI
+c      219 boolean_NMC93XX_EEPROM
+c      220 boolean_EEPRO100_PCI
+c      221 boolean_ES1370
+c      222 boolean_SCSI
+c      223 boolean_ESP
+c      224 boolean_ESP_PCI
+c      225 boolean_HDA
+c      226 boolean_IPACK
+c      227 boolean_LSI_SCSI_PCI
+c      228 boolean_MEGASAS_SCSI_PCI
+c      229 boolean_MPTSAS_SCSI_PCI
+c      230 boolean_NE2000_PCI
+c      231 boolean_NVME_PCI
+c      232 boolean_PCNET_PCI
+c      233 boolean_RTL8139_PCI
+c      234 boolean_SDHCI_PCI
+c      235 boolean_SERIAL_PCI
+c      236 boolean_SERIAL_PCI_MULTI
+c      237 boolean_TULIP
+c      238 boolean_USB_OHCI
+c      239 boolean_USB_OHCI_PCI
+c      240 boolean_USB_XHCI_SYSBUS
+c      241 boolean_USB_XHCI
+c      242 boolean_USB_XHCI_NEC
+c      243 boolean_USB_XHCI_PCI
+c      244 boolean_VGA_CIRRUS
+c      245 boolean_VGA_PCI
+c      246 boolean_VIRTIO_VGA
+c      247 boolean_VIRTIO_PCI
+c      248 boolean_VMWARE_VGA
+c      249 boolean_VMW_PVSCSI_SCSI_PCI
+c      250 boolean_VMXNET3_PCI
+c      251 boolean_WDT_IB6300ESB
+c      252 boolean_PCI_DEVICES
+c      253 boolean_UNIMP
+c      254 boolean_PCI_BONITO
+c      255 boolean_IDE_ISA
+c      256 boolean_PC87312
+c      257 boolean_MILKYMIST_TMU2
+c      258 boolean_OPENGL
+c      259 boolean_OPENCORES_ETH
+c      260 boolean_ONENAND
+c      261 boolean_OMPIC
+c      262 boolean_NVDIMM
+c      263 boolean_MACFB
+c      264 boolean_NUBUS
+c      265 boolean_NAND
+c      266 boolean_MPS2_SCC
+c      267 boolean_MPS2_FPGAIO
+c      268 boolean_MPC_I2C
+c      269 boolean_MIPS_ITU
+c      270 boolean_MIPSNET
+c      271 boolean_MICRODRIVE
+c      272 boolean_MCHP_PFSOC_MMUART
+c      273 boolean_MAX111X
+c      274 boolean_MARVELL_88W8618
+c      275 boolean_ADB
+c      276 boolean_MOS6522
+c      277 boolean_MAC_VIA
+c      278 boolean_ESCC
+c      279 boolean_IDE_MACIO
+c      280 boolean_CHRP_NVRAM
+c      281 boolean_MAC_NVRAM
+c      282 boolean_MACIO
+c      283 boolean_M48T59
+c      284 boolean_SMBUS
+c      285 boolean_ACPI_SMBUS
+c      286 boolean_ACPI_APEI
+c      287 boolean_ACPI_HMAT
+c      288 boolean_ACPI_NVDIMM
+c      289 boolean_ACPI_PCI
+c      290 boolean_ACPI
+c      291 boolean_ACPI_CPU_HOTPLUG
+c      292 boolean_MEM_DEVICE
+c      293 boolean_ACPI_MEMORY_HOTPLUG
+c      294 boolean_ACPI_X86
+c      295 boolean_ACPI_X86_ICH
+c      296 boolean_LPC_ICH9
+c      297 boolean_LOONGSON_LIOINTC
+c      298 boolean_VFIO_IGD
+c      299 boolean_VFIO_PCI
+c      300 boolean_LINUX
+c      301 boolean_I82596_COMMON
+c      302 boolean_LASI_82596
+c      303 boolean_PS2
+c      304 boolean_LASIPS2
+c      305 boolean_PCNET_COMMON
+c      306 boolean_LANCE
+c      307 boolean_LAN9118
+c      308 boolean_HYPERV_TESTDEV
+c      309 boolean_VMBUS
+c      310 boolean_HYPERV
+c      311 boolean_KVM
+c      312 boolean_JAZZ_LED
+c      313 boolean_IVSHMEM_DEVICE
+c      314 boolean_IVSHMEM
+c      315 boolean_IOTKIT_SYSINFO
+c      316 boolean_IOTKIT_SYSCTL
+c      317 boolean_IOTKIT_SECCTL
+c      318 boolean_I8259
+c      319 boolean_IOAPIC
+c      320 boolean_INTEGRATOR_DEBUG
+c      321 boolean_IMX_I2C
+c      322 boolean_IMX_FEC
+c      323 boolean_USB_EHCI_SYSBUS
+c      324 boolean_IMX
+c      325 boolean_IDE_VIA
+c      326 boolean_IDE_SII3112
+c      327 boolean_IDE_PIIX
+c      328 boolean_IDE_MMIO
+c      329 boolean_IDE_CORE
+c      330 boolean_IDE_PCI
+c      331 boolean_IDE_CMD646
+c      332 boolean_I8257
+c      333 boolean_I82374
+c      334 boolean_PCSPK
+c      335 boolean_I8254
+c      336 boolean_MC146818RTC
+c      337 boolean_I82378
+c      338 boolean_HTIF
+c      339 boolean_HPET
+c      340 boolean_HEATHROW_PIC
+c      341 boolean_PCI_IPMI_BT
+c      342 boolean_PCI_IPMI_KCS
+c      343 boolean_SUNGEM
+c      344 boolean_PCI
+c      345 boolean_GRACKLE_PCI
+c      346 boolean_GPIO_KEY
+c      347 boolean_GOLDFISH_RTC
+c      348 boolean_GENERIC_LOADER
+c      349 boolean_G364FB
+c      350 boolean_FW_CFG_DMA
+c      351 boolean_FTGMAC100
+c      352 boolean_FITLOADER
+c      353 boolean_ETSEC
+c      354 boolean_EMPTY_SLOT
+c      355 boolean_ECC
+c      356 boolean_ECCMEMCTL
+c      357 boolean_DS1225Y
+c      358 boolean_AT24C
+c      359 boolean_DS1338
+c      360 boolean_IPMI_EXTERN
+c      361 boolean_IPMI_LOCAL
+c      362 boolean_IPMI
+c      363 boolean_IPMI_SSIF
+c      364 boolean_LM832X
+c      365 boolean_M41T80
+c      366 boolean_MAX7310
+c      367 boolean_PCA9552
+c      368 boolean_EDID
+c      369 boolean_DDC
+c      370 boolean_SII9022
+c      371 boolean_SSD0303
+c      372 boolean_TMP105
+c      373 boolean_TMP421
+c      374 boolean_TWL92230
+c      375 boolean_WM8750
+c      376 boolean_I2C
+c      377 boolean_AUX
+c      378 boolean_DPCD
+c      379 boolean_DP8393X
+c      380 boolean_DIMM
+c      381 boolean_CS4231
+c      382 boolean_COLDFIRE
+c      383 boolean_CMSDK_APB_WATCHDOG
+c      384 boolean_CMSDK_APB_UART
+c      385 boolean_CMSDK_APB_TIMER
+c      386 boolean_CMSDK_APB_DUALTIMER
+c      387 boolean_CG3
+c      388 boolean_SDHCI
+c      389 boolean_CADENCE_SDHCI
+c      390 boolean_CADENCE
+c      391 boolean_BLIZZARD
+c      392 boolean_AVR_USART
+c      393 boolean_AVR_TIMER16
+c      394 boolean_AVR_POWER
+c      395 boolean_FRAMEBUFFER
+c      396 boolean_ARTIST
+c      397 boolean_ARM_TIMER
+c      398 boolean_ARM_MPTIMER
+c      399 boolean_ARM_GIC_KVM
+c      400 boolean_ARM_GIC
+c      401 boolean_ARM11SCU
+c      402 boolean_APM
+c      403 boolean_ROCKER
+c      404 boolean_MSI_NONBROKEN
+c      405 boolean_APIC
+c      406 boolean_ALTERA_TIMER
+c      407 boolean_ALLWINNER_SUN8I_EMAC
+c      408 boolean_ALLWINNER_EMAC
+c      409 boolean_PTIMER
+c      410 boolean_ALLWINNER_A10_PIT
+c      411 boolean_ALLWINNER_A10_PIC
+c      412 boolean_ADS7846
+c      413 boolean_ACPI_VMGENID
+c      414 boolean_ACPI_HW_REDUCED
+c      415 boolean_A9_GTIMER
+c      416 boolean_A9SCU
+-417 0
+-416 0
+-415 0
+-414 0
+-413 0
+-412 0
+-411 0
+-409 0
+-408 0
+-407 0
+-406 0
+-403 0
+-402 0
+-401 0
+-399 0
+-398 0
+-397 0
+-395 0
+-394 0
+-393 0
+-392 0
+-391 0
+-390 0
+-388 0
+-387 0
+-386 0
+-385 0
+-384 0
+-383 0
+-382 0
+-381 0
+-380 0
+-379 0
+-358 0
+-357 0
+-355 0
+-354 0
+-353 0
+-352 0
+-351 0
+-350 0
+349 0
+-348 0
+-347 0
+-346 0
+-341 0
+-340 0
+-339 0
+-338 0
+-332 0
+-329 0
+-328 0
+-327 0
+-326 0
+-325 0
+-323 0
+-322 0
+-321 0
+-320 0
+-318 0
+-317 0
+-316 0
+-315 0
+-313 0
+-312 0
+-308 0
+-307 0
+-305 0
+-303 0
+-301 0
+-298 0
+-297 0
+-284 0
+-283 0
+-278 0
+-275 0
+-274 0
+-273 0
+-272 0
+-271 0
+-270 0
+-269 0
+-268 0
+-267 0
+-266 0
+-265 0
+-263 0
+-262 0
+-261 0
+-260 0
+-259 0
+-257 0
+-255 0
+-253 0
+-205 0
+-204 0
+-197 0
+-195 0
+-194 0
+-193 0
+-192 0
+-191 0
+-190 0
+-189 0
+-188 0
+-186 0
+-185 0
+-182 0
+-181 0
+-180 0
+-179 0
+-178 0
+-177 0
+-176 0
+-174 0
+-173 0
+-172 0
+-171 0
+-167 0
+-166 0
+-164 0
+-162 0
+-161 0
+-160 0
+-159 0
+-158 0
+-157 0
+-156 0
+-154 0
+-153 0
+-152 0
+-151 0
+-150 0
+-149 0
+-148 0
+-147 0
+-146 0
+-145 0
+-144 0
+-143 0
+-142 0
+-141 0
+-140 0
+-139 0
+-117 0
+-116 0
+-115 0
+-112 0
+-111 0
+-110 0
+-109 0
+-108 0
+-107 0
+-106 0
+-105 0
+-104 0
+-103 0
+-102 0
+-101 0
+-100 0
+-99 0
+-98 0
+-97 0
+-96 0
+-95 0
+-94 0
+-93 0
+-89 0
+-85 0
+-81 0
+-80 0
+-79 0
+-78 0
+-76 0
+-75 0
+-74 0
+-73 0
+-69 0
+-57 0
+-55 0
+-54 0
+-52 0
+-51 0
+-50 0
+-48 0
+-45 0
+-44 0
+-40 0
+-24 0
+-22 0
+-21 0
+-19 0
+-18 0
+-17 0
+-16 0
+-15 0
+-13 0
+-12 0
+-9 0
+-8 0
+-7 0
+-6 0
+-5 0
+-4 0
+-2 0
+297 19 -286 0
+-296 0
+-276 0
+-400 0
+-378 0
+-208 0
+-210 0
+-70 0
+-356 0
+-279 0
+257 139 19 -133 0
+-311 0
+-334 0
+406 338 320 257 -319 0
+-302 0
+-280 0
+257 139 19 -135 0
+-264 0
+-282 0
+-258 0
+283 278 -277 0
+-72 0
+-165 0
+197 194 -196 0
+205 204 197 195 -203 0
+411 407 399 398 387 386 384 354 325 308 9 8 -410 0
+4 2 -3 0
+-155 0
+325 185 106 6 5 -184 0
+-86 0
+-254 0
+-212 0
+-324 0
+-77 0
+-170 0
+50 48 45 -49 0
+-14 0
+-11 0
+-295 0
+-281 0
+397 264 177 -396 0
+93 -309 0
+311 -309 0
+334 257 -333 0
+253 -198 0
+203 -198 0
+132 -135 0
+132 -319 0
+132 -133 0
+133 338 319 135 297 189 188 -132 0
+406 401 72 205 -405 0
+-71 0
+345 -203 0
+346 255 203 194 193 167 166 73 55 -345 0
+285 -286 0
+286 140 -285 0
+-183 0
+212 324 -211 0
+-168 0
+-169 0
+-310 0
+-10 0
+253 -213 0
+345 -213 0
+-291 0
+-292 0
+-294 0
+118 -132 0
+132 -118 0
+253 -216 0
+345 -216 0
+-119 0
+253 -217 0
+345 -217 0
+253 -218 0
+345 -218 0
+-207 0
+-209 0
+120 -132 0
+132 -120 0
+-199 0
+253 -219 0
+345 -219 0
+-90 0
+253 -221 0
+345 -221 0
+253 -222 0
+345 -222 0
+253 -225 0
+345 -225 0
+121 -132 0
+132 -121 0
+253 -226 0
+345 -226 0
+338 257 -336 0
+-256 0
+332 328 327 326 -331 0
+-200 0
+253 -227 0
+345 -227 0
+-122 0
+-123 0
+-124 0
+93 -91 0
+132 -91 0
+-314 0
+253 -228 0
+345 -228 0
+338 257 -337 0
+253 -229 0
+345 -229 0
+253 -230 0
+345 -230 0
+126 -132 0
+132 -126 0
+253 -231 0
+345 -231 0
+253 -232 0
+345 -232 0
+136 -132 0
+132 -136 0
+-201 0
+-342 0
+-343 0
+93 -92 0
+345 -92 0
+134 -135 0
+135 -134 0
+253 -233 0
+345 -233 0
+-127 0
+-114 0
+-404 0
+253 -234 0
+345 -234 0
+128 -132 0
+132 -128 0
+253 -235 0
+345 -235 0
+138 -132 0
+132 -138 0
+253 -236 0
+345 -236 0
+253 -237 0
+345 -237 0
+-129 0
+-344 0
+-88 0
+253 -238 0
+345 -238 0
+253 -240 0
+345 -240 0
+253 -187 0
+345 -187 0
+253 -243 0
+345 -243 0
+253 -244 0
+345 -244 0
+-300 0
+253 -245 0
+345 -245 0
+-130 0
+253 -246 0
+345 -246 0
+253 -248 0
+345 -248 0
+253 -249 0
+345 -249 0
+-163 0
+253 -250 0
+345 -250 0
+253 -251 0
+345 -251 0
+253 -252 0
+345 -252 0
+131 -132 0
+132 -131 0
+-202 0
+-287 0
+-288 0
+-289 0
+-290 0
+215 -216 0
+216 -215 0
+56 -217 0
+217 57 -56 0
+208 207 209 210 -206 0
+224 -225 0
+225 -224 0
+125 -126 0
+125 -231 0
+126 231 -125 0
+220 -238 0
+220 -225 0
+220 -221 0
+221 225 238 -220 0
+306 -233 0
+307 233 -306 0
+335 -336 0
+336 -335 0
+304 -134 0
+305 134 180 -304 0
+389 -235 0
+390 235 -389 0
+137 -237 0
+137 -236 0
+137 -138 0
+138 236 237 142 -137 0
+88 86 -87 0
+239 -240 0
+240 -239 0
+242 -244 0
+242 -243 0
+253 -242 0
+345 -242 0
+54 52 300 170 -53 0
+-299 0
+39 -248 0
+40 22 248 -39 0
+-247 0
+377 -56 0
+377 -285 0
+378 56 322 269 142 285 -377 0
+214 -215 0
+215 332 256 280 329 328 327 326 272 -214 0
+175 -389 0
+176 389 183 -175 0
+84 -87 0
+85 81 87 -84 0
+241 -242 0
+242 -241 0
+113 -246 0
+113 -249 0
+113 -245 0
+113 -218 0
+113 -217 0
+217 218 114 245 130 51 246 247 249 -113 0
+-46 0
+-47 0
+-43 0
+25 -39 0
+39 -25 0
+26 -39 0
+39 -26 0
+27 -39 0
+39 -27 0
+30 -39 0
+39 -30 0
+33 -39 0
+39 -33 0
+34 -39 0
+39 -34 0
+-23 0
+35 -39 0
+39 -35 0
+-20 0
+36 -39 0
+39 -36 0
+37 -39 0
+39 -37 0
+38 -39 0
+39 -38 0
+-41 0
+-359 0
+-360 0
+-42 0
+330 -331 0
+330 -214 0
+331 214 -330 0
+-364 0
+-365 0
+-366 0
+-367 0
+294 381 263 23 20 -293 0
+-368 0
+-371 0
+-372 0
+-373 0
+-374 0
+82 -84 0
+84 -82 0
+-83 0
+-375 0
+68 -187 0
+68 -242 0
+68 -241 0
+68 -239 0
+68 -211 0
+69 211 77 239 187 242 241 -68 0
+-29 0
+-31 0
+-32 0
+-376 0
+370 -217 0
+217 371 142 -370 0
+58 -68 0
+68 -58 0
+364 123 124 342 343 -363 0
+59 -68 0
+68 -59 0
+60 -68 0
+68 -60 0
+61 -68 0
+68 -61 0
+62 -68 0
+68 -62 0
+63 -68 0
+68 -63 0
+64 -68 0
+68 -64 0
+65 -68 0
+68 -65 0
+66 -68 0
+68 -66 0
+67 -68 0
+68 -67 0
+-28 0
+369 -30 0
+369 -246 0
+369 -218 0
+369 -370 0
+218 370 300 246 30 -369 0
+361 -363 0
+363 -361 0
+362 -363 0
+363 -362 0
+223 -230 0
+223 -229 0
+223 -228 0
+223 -224 0
+223 -250 0
+223 -37 0
+223 -63 0
+223 -65 0
+224 228 229 230 116 63 65 37 250 -223 0

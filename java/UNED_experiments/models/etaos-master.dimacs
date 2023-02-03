@@ -1,0 +1,682 @@
+p cnf 203 478
+c        1 tristate_XORLIST
+c        2 tristate_XORLIST_M
+c        3 int_USART_BAUD_EQ_9600
+c        4 int_USART_BAUD_EQ_OTHERVAL
+c        5 tristate_ATMEGA_USART
+c        6 tristate_ATMEGA_USART_M
+c        7 tristate_USART
+c        8 tristate_USART_M
+c        9 boolean_PYTHON_SRAM
+c       10 tristate_SRAM
+c       11 tristate_SRAM_M
+c       12 tristate_LIBFLT
+c       13 tristate_LIBFLT_M
+c       14 tristate_BMP085
+c       15 tristate_BMP085_M
+c       16 tristate_I2C_ATMEGA
+c       17 tristate_I2C_ATMEGA_M
+c       18 tristate_I2C
+c       19 tristate_I2C_M
+c       20 boolean_GPIO_LOW_FOOTPRINT
+c       21 tristate_ARD_MEGA
+c       22 tristate_ARD_MEGA_M
+c       23 tristate_ARD_UNO
+c       24 tristate_ARD_UNO_M
+c       25 tristate_ATMEGA_GPIO
+c       26 tristate_ATMEGA_GPIO_M
+c       27 boolean_ARCH_PWM
+c       28 tristate_ATMEGA_PWM
+c       29 tristate_ATMEGA_PWM_M
+c       30 tristate_PWM
+c       31 tristate_PWM_M
+c       32 int_23K256_SPEED_EQ_OTHERVAL
+c       33 int_23K256_SS_EQ_OTHERVAL
+c       34 tristate_23K256
+c       35 tristate_23K256_M
+c       36 tristate_ATMEGA_SPI
+c       37 tristate_ATMEGA_SPI_M
+c       38 tristate_SPI
+c       39 tristate_SPI_M
+c       40 tristate_GPIO
+c       41 tristate_GPIO_M
+c       42 tristate_ATMEGA_FLASH
+c       43 tristate_ATMEGA_FLASH_M
+c       44 tristate_FLASH
+c       45 tristate_FLASH_M
+c       46 tristate_24C02
+c       47 tristate_24C02_M
+c       48 tristate_ATMEGA_EE
+c       49 tristate_ATMEGA_EE_M
+c       50 boolean_PYTHON_EEPROM
+c       51 tristate_EEPROM
+c       52 tristate_EEPROM_M
+c       53 boolean_DRIVER_DBG
+c       54 tristate_DEVFS
+c       55 tristate_DEVFS_M
+c       56 tristate_DRIVER_CORE
+c       57 tristate_DRIVER_CORE_M
+c       58 tristate_ATMEGA_ANALOG
+c       59 tristate_ATMEGA_ANALOG_M
+c       60 tristate_LM35
+c       61 tristate_LM35_M
+c       62 tristate_TMP36
+c       63 tristate_TMP36_M
+c       64 tristate_ANALOG
+c       65 tristate_ANALOG_M
+c       66 string_CROSS_COMPILE_EQ_OTHERVAL
+c       67 int_STACK_SIZE_EQ_OTHERVAL
+c       68 int_FCPU_EQ_8000000
+c       69 int_FCPU_EQ_OTHERVAL
+c       70 boolean_ATMEGA328
+c       71 boolean_ATMEGA1280
+c       72 boolean_ATMEGA2560
+c       73 boolean_WORST_FIT
+c       74 boolean_EXT_STRING
+c       75 boolean_EDF_LOOKUP_TABLE
+c       76 boolean_EDF
+c       77 boolean_CONDITION
+c       78 boolean_EXTENDED_THREAD
+c       79 boolean_IPM
+c       80 boolean_SEM
+c       81 boolean_RR_ENTITY
+c       82 boolean_RR_SHARED
+c       83 boolean_SYS_EDF
+c       84 boolean_SYS_RR
+c       85 boolean_SYS_FIFO
+c       86 boolean_SYS_LOTTERY
+c       87 boolean_FIFO
+c       88 boolean_IRQ_DEBUG
+c       89 int_IRQ_STACK_SIZE_EQ_768
+c       90 int_IRQ_STACK_SIZE_EQ_OTHERVAL
+c       91 boolean_IRQ_THREAD
+c       92 boolean_THREAD_QUEUE
+c       93 boolean_MUTEX_TRADITIONAL
+c       94 boolean_MUTEX_EVENT_QUEUE
+c       95 boolean_EVENT_MUTEX
+c       96 boolean_LOTTERY
+c       97 boolean_RR
+c       98 boolean_SCHED_DBG
+c       99 boolean_SQS
+c      100 boolean_STACK_TRACE_LENGTH
+c      101 int_IDLE_STACK_SIZE_EQ_256
+c      102 int_IDLE_STACK_SIZE_EQ_OTHERVAL
+c      103 int_INIT_STACK_SIZE_EQ_OTHERVAL
+c      104 boolean_SCHED
+c      105 boolean_SPINLOCK_DEBUG
+c      106 boolean_HRTIMER
+c      107 boolean_DELAY_MS
+c      108 boolean_WATCHDOG
+c      109 boolean_SYS_TICK
+c      110 boolean_TIMER_DBG
+c      111 int_DST_BIAS_EQ_-3600
+c      112 int_DST_BIAS_EQ_OTHERVAL
+c      113 boolean_TIMER
+c      114 boolean_HAVE_GENERATORS
+c      115 boolean_CLASSES
+c      116 boolean_HAVE_PRINT
+c      117 boolean_HAVE_REPLICATION
+c      118 boolean_HAVE_STRING_FORMAT
+c      119 tristate_CRT
+c      120 tristate_CRT_M
+c      121 tristate_RAMFS
+c      122 tristate_RAMFS_M
+c      123 tristate_ROMFS
+c      124 tristate_ROMFS_M
+c      125 tristate_VFS
+c      126 tristate_VFS_M
+c      127 boolean_STDIO_SIMUL_AVR
+c      128 boolean_STDIO_USART
+c      129 boolean_SIMUL_AVR
+c      130 boolean_MODULES
+c      131 boolean_SOFT_IRQ
+c      132 boolean_IRQ_SUPPORT
+c      133 boolean_FIRST_FIT
+c      134 int_EXT_MEM_ENABLE_PIN_EQ_OTHERVAL
+c      135 int_EXT_MEM_SIZE_EQ_OTHERVAL
+c      136 boolean_EXT_MEM
+c      137 tristate_DHT11
+c      138 tristate_DHT11_M
+c      139 boolean_DELAY_US
+c      140 boolean_OPTIMIZE_O2
+c      141 boolean_OPTIMIZE_O3
+c      142 boolean_OPTIMIZE_FAST
+c      143 boolean_OPTIMIZE_SIZE
+c      144 boolean_DEBUG
+c      145 tristate_LIBETAOS
+c      146 tristate_LIBETAOS_M
+c      147 boolean_CPP
+c      148 boolean_SYS_BF
+c      149 boolean_SYS_FF
+c      150 boolean_SYS_WF
+c      151 boolean_MM_DEBUG
+c      152 boolean_MM_DESTRUCTIVE_ALLOC
+c      153 boolean_DEFAULTARGS
+c      154 boolean_HAVE_ASSERT
+c      155 boolean_HAVE_BACKTICK
+c      156 boolean_HAVE_BYTEARRAY
+c      157 boolean_HAVE_CLOSURES
+c      158 boolean_HAVE_DEBUG_INFO
+c      159 boolean_HAVE_DEL
+c      160 boolean_HAVE_FLOAT
+c      161 boolean_HAVE_GC
+c      162 boolean_HAVE_IMPORTS
+c      163 boolean_HAVE_SLICE
+c      164 int_PYTHON_HEAP_SIZE_EQ_8192
+c      165 int_PYTHON_HEAP_SIZE_EQ_OTHERVAL
+c      166 int_PYTHON_PRIO_EQ_160
+c      167 int_PYTHON_PRIO_EQ_OTHERVAL
+c      168 int_PYTHON_STACK_SIZE_EQ_4096
+c      169 int_PYTHON_STACK_SIZE_EQ_OTHERVAL
+c      170 boolean_PYTHON
+c      171 boolean_MALLOC
+c      172 boolean_BEST_FIT
+c      173 boolean_IDLE_SLEEP
+c      174 boolean_ARCH_POWER_SAVE
+c      175 ENV_string_SRCARCH_ALIAS_SRCARCH_EQ_OTHERVAL
+c      176 boolean_PICO_POWER
+c      177 boolean_ARCH_TEST_BIT
+c      178 boolean_ARCH_TNC
+c      179 boolean_ARCH_TNS
+c      180 boolean_ARCH_SET_BIT
+c      181 boolean_ARCH_CLEAR_BIT
+c      182 boolean_HARVARD
+c      183 boolean_SCHED_FAIR
+c      184 boolean_DYN_PRIO
+c      185 boolean_PREEMPT_FULL
+c      186 int_TIME_SLICE_EQ_10
+c      187 int_TIME_SLICE_EQ_OTHERVAL
+c      188 boolean_PREEMPT
+c      189 boolean_MUTEX_TRACE
+c      190 boolean_HAVE_ATMEGA_EEPROM
+c      191 boolean_PWM0
+c      192 boolean_HAVE_PWM0
+c      193 boolean_PWM1
+c      194 boolean_HAVE_PWM1
+c      195 boolean_PWM2
+c      196 boolean_HAVE_PWM2
+c      197 boolean_PWM3
+c      198 boolean_HAVE_PWM3
+c      199 int_USART1_BAUD_EQ_OTHERVAL
+c      200 tristate_ATMEGA_USART1
+c      201 tristate_ATMEGA_USART1_M
+c      202 boolean_HAVE_USART1
+c      203 boolean_TRACE_INFO
+176 0
+-72 -71 0
+-73 -71 0
+-72 -73 0
+72 73 71 0
+-69 -70 0
+69 70 0
+68 0
+67 0
+-65 -66 0
+131 -66 0
+-57 -58 0
+131 -58 0
+-52 -53 0
+131 -53 0
+-45 -46 0
+131 -46 0
+-41 -42 0
+131 -42 0
+-19 -20 0
+131 -20 0
+-13 0
+-13 -14 0
+131 -14 0
+-11 -12 0
+131 -12 0
+-8 -9 0
+131 -9 0
+-2 -3 0
+131 -3 0
+182 0
+181 0
+178 0
+179 0
+180 0
+57 58 -54 0
+41 42 -21 0
+183 0
+191 0
+193 0
+195 -72 0
+195 -73 0
+72 73 -195 0
+197 -72 0
+197 -73 0
+72 73 -197 0
+199 -72 0
+199 -73 0
+72 73 -199 0
+203 -72 0
+203 -73 0
+72 73 -203 0
+71 -177 0
+41 42 -132 0
+133 -132 0
+-141 -142 0
+-143 -141 0
+-141 -144 0
+-143 -142 0
+-142 -144 0
+-143 -144 0
+145 143 141 142 144 0
+-145 -141 0
+-145 -142 0
+-145 -143 0
+-145 -144 0
+-149 -150 0
+-149 -151 0
+-150 -151 0
+149 150 151 -74 0
+149 150 151 -173 0
+149 150 151 -134 0
+173 134 74 -149 0
+173 134 74 -150 0
+173 134 74 -151 0
+173 -149 0
+134 -150 0
+74 -151 0
+135 -137 0
+137 -135 0
+136 -137 0
+137 -136 0
+52 53 -47 0
+52 53 -48 0
+19 20 -47 0
+19 20 -48 0
+52 -47 -53 -19 0
+19 -47 -52 -20 0
+52 -47 -53 -20 0
+19 -47 -53 -20 0
+-47 -48 0
+131 -48 0
+65 66 -59 0
+65 66 -60 0
+65 -66 -59 0
+-59 -60 0
+131 -60 0
+52 53 -49 0
+52 53 -50 0
+52 -49 -53 0
+-49 -50 0
+131 -50 0
+45 46 -43 0
+45 46 -44 0
+45 -43 -46 0
+-43 -44 0
+131 -44 0
+41 42 -26 0
+41 42 -27 0
+41 -26 -42 0
+-26 -27 0
+131 -27 0
+8 9 -6 0
+8 9 -7 0
+8 -6 -9 0
+-6 -7 0
+131 -7 0
+19 20 -15 0
+19 20 -16 0
+19 -15 -20 0
+-15 -16 0
+131 -16 0
+41 42 -138 0
+41 42 -139 0
+140 -138 0
+140 -139 0
+41 -140 -138 -42 0
+-138 -139 0
+131 -139 0
+19 20 -17 0
+19 20 -18 0
+19 -17 -20 0
+-17 -18 0
+131 -18 0
+65 66 -61 0
+65 66 -62 0
+65 -66 -61 0
+-61 -62 0
+131 -62 0
+41 42 -31 0
+41 42 -32 0
+41 -42 -31 0
+-31 -32 0
+131 -32 0
+41 42 -39 0
+41 42 -40 0
+41 -42 -39 0
+-39 -40 0
+131 -40 0
+65 66 -63 0
+65 66 -64 0
+65 -66 -63 0
+-63 -64 0
+131 -64 0
+126 -130 0
+126 -57 0
+130 57 126 127 -58 0
+-126 -127 0
+131 -127 0
+-4 -5 0
+4 5 -6 0
+4 5 -7 0
+6 7 -5 0
+6 7 -4 0
+39 40 -35 0
+39 40 -36 0
+11 12 -35 0
+11 12 -36 0
+39 -35 -40 -11 0
+11 -35 -39 -12 0
+11 -35 -40 -12 0
+39 -35 -40 -12 0
+-35 -36 0
+131 -36 0
+26 27 -22 0
+26 27 -23 0
+73 -22 0
+73 -23 0
+26 -73 -22 -27 0
+-22 -23 0
+131 -23 0
+26 27 -24 0
+26 27 -25 0
+71 -24 0
+71 -25 0
+26 -71 -24 -27 0
+-24 -25 0
+131 -25 0
+31 32 -29 0
+31 32 -30 0
+31 -29 -32 0
+-29 -30 0
+131 -30 0
+39 40 -37 0
+39 40 -38 0
+39 -37 -40 0
+-37 -38 0
+131 -38 0
+203 -201 0
+203 -202 0
+8 9 -201 0
+8 9 -202 0
+8 -203 -201 -9 0
+-201 -202 0
+131 -202 0
+-120 -126 0
+-120 -127 0
+126 127 -120 0
+126 127 -121 0
+-120 -121 0
+131 -121 0
+55 -57 0
+126 -55 -58 -127 0
+55 56 -58 -127 0
+55 56 -58 -126 0
+126 127 -55 0
+126 127 -56 0
+57 58 126 -55 -127 0
+-55 -56 0
+131 -56 0
+126 127 -122 0
+126 127 -123 0
+126 -122 -127 0
+-122 -123 0
+131 -123 0
+126 127 -124 0
+126 127 -125 0
+126 -124 -127 0
+-124 -125 0
+131 -125 0
+28 -30 0
+28 -29 0
+29 30 -28 0
+120 121 -75 0
+29 30 -192 0
+29 30 -194 0
+195 -194 0
+197 -196 0
+29 30 -196 0
+199 -198 0
+29 30 -198 0
+120 121 -105 0
+120 121 -106 0
+-128 -129 0
+130 128 129 -121 -9 0
+128 129 -130 -121 0
+128 129 -121 -8 0
+130 120 8 9 -128 0
+130 120 8 9 -129 0
+130 120 121 8 -128 0
+130 120 121 8 -129 0
+130 8 9 -128 0
+130 8 9 -129 0
+130 121 8 9 -128 0
+130 121 8 9 -129 0
+130 120 121 8 9 -128 0
+130 120 121 8 9 -129 0
+130 120 121 8 -128 0
+130 120 121 8 -129 0
+130 121 8 9 -128 0
+130 121 8 9 -129 0
+130 121 8 9 -128 0
+130 121 8 9 -129 0
+130 120 8 9 -128 0
+130 120 8 9 -129 0
+130 120 121 8 -128 0
+130 120 121 8 -129 0
+130 120 8 9 -128 0
+130 120 8 9 -129 0
+130 120 121 8 9 -128 0
+130 120 121 8 9 -129 0
+120 121 9 -128 0
+120 121 9 -129 0
+120 121 -130 -128 0
+120 121 -130 -129 0
+120 121 -128 -8 0
+120 121 -129 -8 0
+120 121 -128 0
+120 121 -129 0
+120 121 9 -128 0
+120 121 9 -129 0
+120 121 9 -130 -128 0
+120 121 9 -130 -129 0
+120 121 9 -128 -8 0
+120 121 9 -129 -8 0
+120 121 9 -128 0
+120 121 9 -129 0
+120 121 9 -130 -128 0
+120 121 9 -130 -129 0
+120 121 -130 -128 0
+120 121 -130 -129 0
+120 121 -130 -128 -8 0
+120 121 -130 -129 -8 0
+120 121 -130 -128 0
+120 121 -130 -129 0
+120 121 9 -128 -8 0
+120 121 9 -129 -8 0
+120 121 -130 -128 -8 0
+120 121 -130 -129 -8 0
+120 121 -128 -8 0
+120 121 -129 -8 0
+120 121 -128 -8 0
+120 121 -129 -8 0
+130 -128 0
+8 9 -129 0
+33 -35 0
+35 36 -33 0
+33 -36 0
+34 -35 0
+35 36 -34 0
+34 -36 0
+200 -201 0
+201 202 -200 0
+200 -202 0
+105 -77 0
+105 -96 0
+175 -174 0
+105 -174 0
+105 -97 0
+105 -98 0
+105 -99 0
+105 -100 0
+105 -101 0
+114 -105 0
+-102 -103 0
+102 103 -105 0
+105 -103 0
+105 -102 0
+104 -105 0
+105 -104 0
+96 -78 0
+77 -76 0
+96 -79 0
+114 -107 0
+96 -80 0
+172 -173 0
+172 -58 0
+172 -57 0
+172 -114 0
+172 -74 0
+172 -134 0
+172 -133 0
+173 134 133 114 74 57 58 -172 0
+96 -81 0
+110 -105 0
+105 114 -110 0
+93 -96 0
+96 105 -93 0
+114 -111 0
+-95 -94 0
+95 94 -105 0
+105 -94 0
+105 -95 0
+96 -95 0
+-112 -113 0
+112 113 -114 0
+114 -113 0
+114 -112 0
+110 -108 0
+88 -93 0
+105 93 -88 0
+96 -92 0
+133 -92 0
+172 -152 0
+172 -153 0
+95 -190 0
+120 121 -171 0
+172 -171 0
+110 -109 0
+-148 -79 -65 -41 -146 0
+-148 -79 -66 -41 -146 0
+-148 -79 -65 -42 -146 0
+-148 -79 -66 -42 -146 0
+79 -146 0
+79 -147 0
+41 42 -146 0
+41 42 -147 0
+148 -146 0
+148 -147 0
+65 66 -146 0
+65 66 -147 0
+-146 -147 0
+131 -147 0
+116 -171 -120 0
+116 -171 -121 0
+171 -116 0
+120 121 -116 0
+171 -154 0
+171 -155 0
+171 -156 0
+171 -157 0
+171 -158 0
+171 -159 0
+171 -160 0
+171 -161 0
+171 -162 0
+163 -171 0
+171 -163 0
+120 121 -117 0
+171 -117 0
+120 121 -118 0
+171 -118 0
+164 -171 0
+171 -164 0
+120 121 -119 0
+171 -119 0
+92 -89 0
+171 -51 0
+52 53 -51 0
+11 12 -10 0
+171 -10 0
+82 -98 0
+82 -88 -105 0
+82 -97 0
+82 -77 0
+77 97 98 105 -82 0
+77 88 97 98 -82 0
+83 -88 -105 0
+83 -77 0
+83 -98 0
+83 -97 0
+77 97 98 105 -83 0
+77 88 97 98 -83 0
+204 -106 0
+204 -190 0
+190 106 120 121 -204 0
+-84 -85 0
+-84 -86 0
+-84 -87 0
+-86 -85 0
+-87 -85 0
+-86 -87 0
+84 86 87 85 -77 -105 0
+84 86 87 85 -98 -105 0
+84 86 87 85 -88 -105 0
+84 86 87 85 -97 -105 0
+77 88 97 98 -84 0
+77 88 97 98 -85 0
+77 88 97 98 -86 0
+77 88 97 98 -87 0
+105 -84 0
+105 -85 0
+105 -86 0
+105 -87 0
+77 -84 0
+98 -85 0
+88 -86 0
+97 -87 0
+-90 -91 0
+90 91 -92 0
+92 -91 0
+92 -90 0
+-165 -166 0
+165 166 -171 0
+171 -166 0
+171 -165 0
+-167 -168 0
+167 168 -171 -105 0
+171 -168 0
+105 -168 0
+171 -167 0
+105 -167 0
+-169 -170 0
+169 170 -171 -105 0
+171 -170 0
+105 -170 0
+171 -169 0
+105 -169 0
+85 -185 0
+115 -116 0
+116 -115 0
+84 85 -189 0
+84 -184 0
+189 -186 0
+-187 -188 0
+187 188 -189 0
+189 -188 0
+189 -187 0
