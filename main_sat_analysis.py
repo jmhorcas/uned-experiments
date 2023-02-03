@@ -69,7 +69,7 @@ def main(fm_filepath: str, solver_name: str) -> None:
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Analyze an FM using the SAT Solver.')
-    parser.add_argument('-fm', '--featuremodel', dest='feature_model', type=str, required=True, help='Input feature model. Supported formats: .uvl (UVL), .cnf (Dimacs).')
+    parser.add_argument('-fm', '--featuremodel', dest='feature_model', type=str, required=True, help='Input feature model. Supported formats: .uvl (UVL), .dimacs (Dimacs).')
     parser.add_argument('-s', '--solver', dest='solver', type=str, required=False, default='glucose3', help='Solver to use (default "glucose3").' + SOLVER_NAMES)
     args = parser.parse_args()
 
