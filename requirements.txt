@@ -1,0 +1,20 @@
+afmparser==1.0.0
+antlr-denter==1.3.1
+antlr4-python3-runtime==4.7.2
+certifi==2022.12.7
+charset-normalizer==3.0.1
+falcon==2.0.0
+flamapy==1.0.1
+-e git+https://github.com/jmhorcas/bdd_metamodel.git@ba0854e6106bd6129243139d58905eadfef7cf6b#egg=flamapy_bdd
+-e git+https://github.com/jmhorcas/fm_metamodel.git@dcc14ab9162c615615d68be6eace638400494433#egg=flamapy_fm
+-e git+https://github.com/jmhorcas/pysat_metamodel.git@d547462548459a038636d7ed293fed7e8389bcb9#egg=flamapy_sat
+hug==2.6.1
+idna==3.4
+objsize==0.6.1
+pyaml==21.10.1
+python-sat==0.1.7.dev26
+PyYAML==6.0
+requests==2.28.2
+six==1.16.0
+urllib3==1.26.14
+-e git+https://github.com/jmhorcas/uvlparser.git@76faa2485bb7972c061e862f803d0cf2f1f8a71f#egg=uvlparser

@@ -10,7 +10,8 @@ import locale
 
 TOOL_NAME = 'Flama'
 OUTPUT_FILE = 'result.csv'
-SCRIPT = 'main_sat_analysis.py'
+SCRIPT_PYTHON = 'main_sat_analysis.py'
+SCRIPT_JAVA = 'fide_sat_analysis.jar'
 COLUMNS_VALUES = [3]
 TIMEOUT = 2
 
@@ -24,7 +25,7 @@ def get_fm_filepath_models(dir: str) -> list[str]:
     return models
 
 
-def main(runs: int, filepath: str, solver_name: str) -> tuple[str, list[str]]:
+def main(runs: int, filepath: str, solver_name: str, command: list[str]) -> tuple[str, list[str]]:
     # Get path and filename
     path, filename = os.path.split(filepath)
     filename = filename.split('.')[0]
@@ -34,7 +35,7 @@ def main(runs: int, filepath: str, solver_name: str) -> tuple[str, list[str]]:
     for i in range(1, runs + 1):
         print(f'{i} ', end='', flush=True)
         try:
-            process = subprocess.run(args=['python', SCRIPT, '-fm', filepath, '-s', solver_name], stdout=subprocess.PIPE, timeout=TIMEOUT) #, stderr=subprocess.DEVNULL)
+            process = subprocess.run(args=command, stdout=subprocess.PIPE, timeout=TIMEOUT) #, stderr=subprocess.DEVNULL)
             result = process.stdout.decode(locale.getdefaultlocale()[1])
         except subprocess.TimeoutExpired as e:
             print(f'Timeout for model: {filepath}')
@@ -68,7 +69,8 @@ if __name__ == '__main__':
         print(f'FM {i}/{n_models} ({round(i/n_models*100, 2)}%): {filepath}')
         try:
             # Glucose4 solver
-            header, result = main(n_runs, filepath, 'glucose4')
+            solver_name = 'glucose4'
+            header, result = main(n_runs, filepath, solver_name, ['python', SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
             if header_file is None:
                 header_file = header
                 with open(OUTPUT_FILE, 'w+', encoding='utf8') as file:
@@ -77,16 +79,29 @@ if __name__ == '__main__':
                     file.write(f'{os.linesep.join(result)}{os.linesep}')
             
             # lingeling solver
-            _, result = main(n_runs, filepath, 'lingeling')
+            solver_name = 'lingeling'
+            _, result = main(n_runs, filepath, solver_name, ['python', SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
             with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
                     file.write(f'{os.linesep.join(result)}{os.linesep}')
 
             # minisat22 solver
-            _, result = main(n_runs, filepath, 'minisat22')
+            solver_name = 'minisat22'
+            _, result = main(n_runs, filepath, solver_name, ['python', SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
+            with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
+                file.write(f'{os.linesep.join(result)}{os.linesep}')
+
+            # sat4j solver (FeatureIDE)
+            path, filename = os.path.split(filepath)
+            filename = filename.split('.')[0]
+            filepath_dimacs = os.path.join(path, filename + '.dimacs')
+            print(f'DIMACS file: {filepath_dimacs}')
+            solver_name = 'sat4j'
+            _, result = main(n_runs, filepath_dimacs, solver_name, ['java', '-jar', SCRIPT_JAVA, filepath_dimacs])
             with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
                 file.write(f'{os.linesep.join(result)}{os.linesep}')
 
 
         except Exception as e:
             print(f'Error in model: {filepath}')
+            print(e)
     
