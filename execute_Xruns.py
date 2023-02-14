@@ -13,7 +13,7 @@ OUTPUT_FILE = 'result.csv'
 SCRIPT_PYTHON = 'main_sat_analysis.py'
 SCRIPT_JAVA = 'fide_sat_analysis.jar'
 COLUMNS_VALUES = [3]
-TIMEOUT = 2
+TIMEOUT = 3600
 
 def get_fm_filepath_models(dir: str) -> list[str]:
     """Get all models from the given directory."""
