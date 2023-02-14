@@ -1,0 +1,34 @@
+p cnf 12 21
+c 1 Pizza
+c 2 Topping
+c 3 Salami
+c 4 Ham
+c 5 Mozzarella
+c 6 Size
+c 7 Normal
+c 8 Big
+c 9 Dough
+c 10 Neapolitan
+c 11 Sicilian
+c 12 CheesyCrust
+1
+-1 2
+-2 1
+-2 3 4 5
+-3 2
+-4 2
+-5 2
+-1 6
+-6 1
+-6 7 8
+-7 -8
+-7 6
+-8 6
+-1 9
+-9 1
+-9 10 11
+-10 -11
+-10 9
+-11 9
+-12 1
+-12 8
