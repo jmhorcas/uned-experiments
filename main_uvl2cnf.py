@@ -29,7 +29,7 @@ def main(dir: str, output_dir: str):
             if fm_filepath.endswith('.uvl'):
                 # Get FM name
                 fm_name = '.'.join(os.path.basename(fm_filepath).split('.')[:-1])
-                output_filepath = f'{os.path.join(output_dir,fm_name)}.{DimacsWriter.get_destination_extension()}'
+                output_filepath = f'{os.path.join(output_dir,fm_name)}.cnf'
 
                 if not os.path.exists(output_filepath):
                     # Load the feature model

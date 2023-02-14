@@ -4,7 +4,7 @@ import argparse
 from flamapy.metamodels.fm_metamodel.transformations import UVLReader
 
 from flamapy.metamodels.pysat_metamodel.transformations import FmToPysat, DimacsReader
-from flamapy.metamodels.pysat_metamodel.operations import SATCoreFeatures, SATDeadFeatures
+from flamapy.metamodels.pysat_metamodel.operations import SATCoreDeadFeatures
 
 from utils import timer, memory_profiler
 
@@ -25,44 +25,35 @@ SOLVER_NAMES = """
             minisatgh   = ('mgh', 'msat-gh', 'minisat-gh')
 """
 
-CODES = ['Reading', 'Transformation', 'CoreFeatures_op', 'DeadFeatures_op']
+HEADER = ['Model', 'Tool', 'SAT-solver', 'Seconds']
+TOOL_NAME = 'Flama'
 
 
 def main(fm_filepath: str, solver_name: str) -> None:
     # Get feature model name
-    fm_name = '.'.join(os.path.basename(fm_filepath).split('.')[:-1])
+    path, filename = os.path.split(fm_filepath)
+    filename = filename.split('.')[0]
 
     # Load the feature model
     if fm_filepath.endswith('.uvl'):
-        with memory_profiler.MemoryProfiler(name=CODES[0], logger=None), timer.Timer(name=CODES[0], logger=None):
-            feature_model = UVLReader(fm_filepath).transform()
+        feature_model = UVLReader(fm_filepath).transform()
 
         # Create the BDD from the FM
-        with memory_profiler.MemoryProfiler(name=CODES[1], logger=None), timer.Timer(name=CODES[1], logger=None):
-            sat_model = FmToPysat(feature_model).transform()
+        sat_model = FmToPysat(feature_model).transform()
     else:
-        with memory_profiler.MemoryProfiler(name=CODES[0], logger=None), timer.Timer(name=CODES[0], logger=None):
-            sat_model = DimacsReader(fm_filepath).transform()
-        
-        # Not transformation is needed
-        with memory_profiler.MemoryProfiler(name=CODES[1], logger=None), timer.Timer(name=CODES[1], logger=None):
-            pass
+        sat_model = DimacsReader(fm_filepath).transform()
 
     # Core features
-    with memory_profiler.MemoryProfiler(name=CODES[2], logger=None), timer.Timer(name=CODES[2], logger=None):
-        core_features = SATCoreFeatures(solver_name).execute(sat_model).get_result()
+    with timer.Timer(name='Time', logger=None):
+        core_features, dead_features = SATCoreDeadFeatures(solver_name).execute(sat_model).get_result()
     print(f'Core features: {len(core_features)} {core_features}')
-
-    # Dead features
-    with memory_profiler.MemoryProfiler(name=CODES[3], logger=None), timer.Timer(name=CODES[3], logger=None):
-        dead_features = SATDeadFeatures(solver_name).execute(sat_model).get_result()
     print(f'Dead features: {len(dead_features)} {dead_features}')
+    
+    time_seconds = str(round(timer.Timer.timers['Time'], 4))
 
-    # Print outputs
-    header = f"{','.join(c + '(s)' for c in CODES)},{','.join(c + '(B)' for c in CODES)},#Cores,Cores,#Deads,Deads"
-    values = ','.join([str(timer.Timer.timers[c]) for c in CODES])
-    values += ',' + ','.join([str(memory_profiler.MemoryProfiler.memory_profilers[c]) for c in CODES])
-    values += f',{len(core_features)},{core_features},{len(dead_features)},{dead_features}'
+    print()
+    header = ';'.join(HEADER)
+    values = ';'.join([filename, TOOL_NAME, solver_name, time_seconds])
     print(header)
     print(values)
 
