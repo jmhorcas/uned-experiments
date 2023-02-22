@@ -1,0 +1,26 @@
+models/UNED/dimacs/klipper.dimacs
+models/UNED/dimacs/Kitten.dimacs
+models/UNED/dimacs/Linux-2.6.33.3-basic.dimacs
+models/UNED/dimacs/snap.dimacs
+models/UNED/dimacs/ktap.dimacs
+models/UNED/dimacs/rnk.dimacs
+models/UNED/dimacs/binutils.dimacs
+models/UNED/dimacs/qemu.dimacs
+models/UNED/dimacs/mplayer.dimacs
+models/UNED/dimacs/zephyr.dimacs
+models/UNED/dimacs/etaos-master.dimacs
+models/UNED/dimacs/Jerryscript.dimacs
+models/UNED/dimacs/lis-next.dimacs
+models/UNED/dimacs/u-boot.dimacs
+models/UNED/dimacs/friendup.dimacs
+models/UNED/dimacs/FM-3.6.1-refined.dimacs
+models/UNED/dimacs/rt-thread.dimacs
+models/UNED/dimacs/barebox-2015.dimacs
+models/UNED/dimacs/mars.dimacs
+models/UNED/dimacs/swupdate.dimacs
+models/UNED/dimacs/wireguard.dimacs
+models/UNED/dimacs/seabios-hppa.dimacs
+models/UNED/dimacs/Pingzee.dimacs
+models/UNED/dimacs/coreboot.dimacs <-- RuntimeTimeoutException for some executions (6) 
+models/UNED/dimacs/distortos.dimacs
+models/UNED/dimacs/halm.dimacs
