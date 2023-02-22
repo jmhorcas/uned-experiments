@@ -36,7 +36,7 @@ def main(runs: int, filepath: str, solver_name: str, command: list[str]) -> tupl
         print(f'{i} ', end='', flush=True)
         try:
             process = subprocess.run(args=command, stdout=subprocess.PIPE, timeout=TIMEOUT) #, stderr=subprocess.DEVNULL)
-            result = process.stdout.decode(locale.getdefaultlocale()[1])
+            result = process.stdout.decode(locale.getlocale()[1])
         except subprocess.TimeoutExpired as e:
             print(f'Timeout for model: {filepath}')
             return ('', [';'.join([filename, TOOL_NAME, solver_name, 'timeout'])])
