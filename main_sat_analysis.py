@@ -32,7 +32,7 @@ TOOL_NAME = 'Flama'
 def main(fm_filepath: str, solver_name: str) -> None:
     # Get feature model name
     path, filename = os.path.split(fm_filepath)
-    filename = filename.split('.')[0]
+    filename = '.'.join(filename.split('.')[:-1])
 
     # Load the feature model
     if fm_filepath.endswith('.uvl'):

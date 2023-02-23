@@ -102,7 +102,7 @@ if __name__ == '__main__':
 
                 # sat4j solver (FeatureIDE)
                 path, filename = os.path.split(filepath)
-                filename = filename.split('.')[0]
+                filename = '.'.join(filename.split('.')[:-1])
                 filepath_dimacs = os.path.join(path, filename + '.dimacs')
                 print(f'DIMACS file: {filepath_dimacs}')
                 solver_name = 'sat4j'
