@@ -1,4 +1,4 @@
-p cnf 6 9
+p cnf 7 9
 c 1 string_LWS_MODEL_NAME_EQ_lws
 c 2 string_LWS_OTA_SERVER_BASE_URL_EQ_/esp32-ota
 c 3 string_LWS_OTA_SERVER_FQDN_EQ_EMPTY

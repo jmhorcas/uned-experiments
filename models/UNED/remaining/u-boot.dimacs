@@ -1,4 +1,4 @@
-p cnf 24 144
+p cnf 25 144
 c 1 string_SYS_VENDOR_EQ_OTHERVAL
 c 2 string_SYS_SOC_EQ_OTHERVAL
 c 3 string_SYS_CPU_EQ_OTHERVAL

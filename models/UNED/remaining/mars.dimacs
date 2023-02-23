@@ -1,4 +1,4 @@
-p cnf 42 57
+p cnf 43 57
 c 1 boolean_MARS_BENCHMARK
 c 2 boolean_MARS_CHECKS
 c 3 boolean_MARS_DEBUG_DEFAULT

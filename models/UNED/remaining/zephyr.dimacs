@@ -1,4 +1,4 @@
-p cnf 19 28
+p cnf 20 28
 c 1 string_SOC_SERIES_EQ_OTHERVAL
 c 2 string_SOC_FAMILY_EQ_OTHERVAL
 c 3 string_SOC_EQ_OTHERVAL

@@ -1,4 +1,4 @@
-p cnf 203 478
+p cnf 204 478
 c 1 tristate_XORLIST
 c 2 tristate_XORLIST_M
 c 3 int_USART_BAUD_EQ_9600

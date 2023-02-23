@@ -1,4 +1,4 @@
-p cnf 4 4
+p cnf 5 4
 c 1 string_TOOLPREFIX_EQ_xtensa-esp32-elf-
 c 2 string_PYTHON_EQ_python
 c 3 boolean_OPTIMIZATION_LEVEL_DEBUG

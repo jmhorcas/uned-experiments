@@ -1,4 +1,4 @@
-p cnf 16 16
+p cnf 17 16
 c 1 string_bfd_file_ptr_EQ_BFD_HOST_64_BIT
 c 2 string_BFD_HOST_U_64_BIT_EQ_unsigned_long_long
 c 3 string_BFD_HOST_64_BIT_EQ_long_long

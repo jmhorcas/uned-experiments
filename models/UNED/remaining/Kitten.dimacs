@@ -1,4 +1,4 @@
-p cnf 40 48
+p cnf 41 48
 c 1 hex_PHYSICAL_START_EQ_0x200000
 c 2 boolean_TIMER_PERIODIC
 c 3 boolean_TIMER_ONESHOT

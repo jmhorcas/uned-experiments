@@ -1,4 +1,4 @@
-p cnf 288 664
+p cnf 289 664
 c 1 boolean_CORE_X86
 c 2 boolean_CORE_X86_64
 c 3 boolean_CORE_CORTEX_M0

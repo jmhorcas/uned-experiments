@@ -1,4 +1,4 @@
-p cnf 296 1297
+p cnf 297 1297
 c 1 boolean_MACH_AVR
 c 2 boolean_MACH_ATSAM
 c 3 boolean_MACH_ATSAMD

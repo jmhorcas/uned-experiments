@@ -1,4 +1,4 @@
-p cnf 6 12
+p cnf 7 12
 c 1 tristate_HYPERV_UTILS
 c 2 tristate_HYPERV_UTILS_M
 c 3 tristate_HYPERV_BALLOON

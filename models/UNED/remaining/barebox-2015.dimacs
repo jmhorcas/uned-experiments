@@ -1,4 +1,4 @@
-p cnf 41 303
+p cnf 42 303
 c 1 boolean_ARCH_AT91
 c 2 boolean_ARCH_BCM2835
 c 3 boolean_ARCH_CLPS711X

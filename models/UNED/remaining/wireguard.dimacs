@@ -1,4 +1,4 @@
-p cnf 3 5
+p cnf 4 5
 c 1 boolean_WIREGUARD_DEBUG
 c 2 tristate_WIREGUARD
 c 3 tristate_WIREGUARD_M

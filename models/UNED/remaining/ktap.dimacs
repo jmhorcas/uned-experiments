@@ -1,4 +1,4 @@
-p cnf 4 8
+p cnf 5 8
 c 1 tristate_KTAP_FFI
 c 2 tristate_KTAP_FFI_M
 c 3 tristate_KTAP
