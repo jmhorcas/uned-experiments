@@ -28,7 +28,7 @@ def get_fm_filepath_models(dir: str) -> list[str]:
 def main(runs: int, filepath: str, solver_name: str, command: list[str]) -> tuple[str, list[str]]:
     # Get path and filename
     path, filename = os.path.split(filepath)
-    filename = filename.split('.')[:-1]
+    filename = '.'.join(filename.split('.')[:-1])
 
     results = []
     print(f'Executing {runs} runs for model {filepath} with solver {solver_name}:')
@@ -73,7 +73,7 @@ if __name__ == '__main__':
 
         # Avoid already analyzed models
         path, filename = os.path.split(filepath)
-        filename = filename.split('.')[:-1]
+        filename = '.'.join(filename.split('.')[:-1])
         if filename in analyzed_models:
             print(f'Skypped model.')
         else:
