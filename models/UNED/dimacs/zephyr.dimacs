@@ -1,23 +1,24 @@
-p cnf 19 28
-c        1 string_SOC_SERIES_EQ_OTHERVAL
-c        2 string_SOC_FAMILY_EQ_OTHERVAL
-c        3 string_SOC_EQ_OTHERVAL
-c        4 string_BOARD_EQ_OTHERVAL
-c        5 string_ARCH_EQ_OTHERVAL
-c        6 boolean_ARC
-c        7 boolean_ARM
-c        8 boolean_X86
-c        9 boolean_NIOS2
-c       10 boolean_RISCV32
-c       11 boolean_XTENSA
-c       12 boolean_SYS_POWER_LOW_POWER_STATE_SUPPORTED
-c       13 boolean_SYS_POWER_DEEP_SLEEP_SUPPORTED
-c       14 boolean_SIMPLE_FATAL_ERROR_HANDLER
-c       15 boolean_GEN_IRQ_VECTOR_TABLE
-c       16 boolean_GEN_SW_ISR_TABLE
-c       17 int_GEN_IRQ_START_VECTOR_EQ_0
-c       18 boolean_GEN_ISR_TABLES
-c       19 boolean_BOOTLOADER_CONTEXT_RESTORE_SUPPORTED
+p cnf 20 28
+c 1 string_SOC_SERIES_EQ_OTHERVAL
+c 2 string_SOC_FAMILY_EQ_OTHERVAL
+c 3 string_SOC_EQ_OTHERVAL
+c 4 string_BOARD_EQ_OTHERVAL
+c 5 string_ARCH_EQ_OTHERVAL
+c 6 boolean_ARC
+c 7 boolean_ARM
+c 8 boolean_X86
+c 9 boolean_NIOS2
+c 10 boolean_RISCV32
+c 11 boolean_XTENSA
+c 12 boolean_SYS_POWER_LOW_POWER_STATE_SUPPORTED
+c 13 boolean_SYS_POWER_DEEP_SLEEP_SUPPORTED
+c 14 boolean_SIMPLE_FATAL_ERROR_HANDLER
+c 15 boolean_GEN_IRQ_VECTOR_TABLE
+c 16 boolean_GEN_SW_ISR_TABLE
+c 17 int_GEN_IRQ_START_VECTOR_EQ_0
+c 18 boolean_GEN_ISR_TABLES
+c 19 boolean_BOOTLOADER_CONTEXT_RESTORE_SUPPORTED
+c 20 missFeature
 -20 0
 -14 0
 -13 0
