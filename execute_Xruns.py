@@ -9,7 +9,8 @@ import locale
 
 
 TOOL_NAME = 'Flama'
-OUTPUT_FILE = 'result.csv'
+OUTPUT_FILE = 'result2.csv'
+ALREADY_ANALYZED_RESULTS = 'result.csv'
 SCRIPT_PYTHON = 'main_sat_analysis.py'
 SCRIPT_JAVA = 'fide_sat_analysis.jar'
 COLUMNS_VALUES = [3]
@@ -61,7 +62,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # to avoid already analyzed models
-    with open('result.csv', 'r') as f:
+    with open(ALREADY_ANALYZED_RESULTS, 'r') as f:
         analyzed_models = f.read()
 
     n_runs = args.runs
