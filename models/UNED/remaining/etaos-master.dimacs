@@ -202,6 +202,7 @@ c 200 tristate_ATMEGA_USART1
 c 201 tristate_ATMEGA_USART1_M
 c 202 boolean_HAVE_USART1
 c 203 boolean_TRACE_INFO
+c 204 missFeature
 176 0
 -72 -71 0
 -73 -71 0

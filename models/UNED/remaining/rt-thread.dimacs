@@ -103,6 +103,7 @@ c 101 boolean_RT_USING_MEMHEAP
 c 102 boolean_RT_USING_HEAP
 c 103 boolean_RT_USING_SLAB
 c 104 boolean_RT_USING_SMALL_MEM
+c 105 missFeature
 -95 -96 0
 -94 -96 0
 -93 -96 0

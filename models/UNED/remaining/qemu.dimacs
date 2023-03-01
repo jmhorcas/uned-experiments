@@ -415,6 +415,7 @@ c 413 boolean_ACPI_VMGENID
 c 414 boolean_ACPI_HW_REDUCED
 c 415 boolean_A9_GTIMER
 c 416 boolean_A9SCU
+c 417 missFeature
 -417 0
 -416 0
 -415 0

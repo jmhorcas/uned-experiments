@@ -91,6 +91,7 @@ c 89 boolean_SMBIOS
 c 90 boolean_ACPI_DSDT
 c 91 boolean_ACPI
 c 92 boolean_ACPI_PARSE
+c 93 missFeature
 -15 -14 0
 15 14 0
 -12 -13 0

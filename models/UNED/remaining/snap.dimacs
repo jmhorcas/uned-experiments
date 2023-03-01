@@ -153,6 +153,7 @@ c 151 string_SIMULATOR_EQ_xsim
 c 152 string_DENALI_USED_EQ_FALSE
 c 153 string_DENALI_USED_EQ_TRUE
 c 154 boolean_ENABLE_DENALI
+c 155 missFeature
 38 0
 38 0
 -10 -9 0

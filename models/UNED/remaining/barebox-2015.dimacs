@@ -40,6 +40,7 @@ c 38 boolean_ARM_LINUX
 c 39 boolean_ARM_EXCEPTIONS
 c 40 boolean_ARM
 c 41 boolean_HAVE_MACH_ARM_HEAD
+c 42 missFeature
 41 0
 -39 0
 -36 0

@@ -41,6 +41,7 @@ c 39 int_MARS_SYNC_FLIP_INTERVAL_EQ_OTHERVAL
 c 40 string_MARS_LOGDIR_EQ_/mars
 c 41 tristate_MARS
 c 42 tristate_MARS_M
+c 43 missFeature
 -42 0
 -43 0
 -42 -43 0

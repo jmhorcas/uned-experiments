@@ -5,6 +5,7 @@ c 3 boolean_ARCHITECTURE_HAS_FPU
 c 4 boolean_ARCHITECTURE_EMPTY_STACK
 c 5 boolean_ARCHITECTURE_ASCENDING_STACK
 c 6 boolean_ARCHITECTURE_ARM
+c 7 missFeature
 -7 0
 -6 0
 -5 0

@@ -295,6 +295,7 @@ c 293 boolean_USBSERIAL
 c 294 int_SERIAL_BAUD_EQ_250000
 c 295 int_SERIAL_BAUD_EQ_OTHERVAL
 c 296 boolean_SERIAL
+c 297 missFeature
 -3 -2 0
 -4 -2 0
 -2 -5 0

@@ -23,6 +23,7 @@ c 21 boolean_X86
 c 22 boolean_CREATE_ARCH_SYMLINK
 c 23 boolean_SYS_GENERIC_BOARD
 c 24 boolean_HAVE_GENERIC_BOARD
+c 25 missFeature
 -8 -9 0
 -8 -10 0
 -8 -11 0

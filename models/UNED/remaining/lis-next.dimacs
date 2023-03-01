@@ -5,6 +5,7 @@ c 3 tristate_HYPERV_BALLOON
 c 4 tristate_HYPERV_BALLOON_M
 c 5 tristate_HYPERV
 c 6 tristate_HYPERV_M
+c 7 missFeature
 -6 0
 -7 0
 -6 -7 0
