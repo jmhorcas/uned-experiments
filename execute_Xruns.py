@@ -61,7 +61,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # to avoid already analyzed models
-    with open('result1.csv', 'r') as f:
+    with open('result.csv', 'r') as f:
         analyzed_models = f.read()
 
     n_runs = args.runs
