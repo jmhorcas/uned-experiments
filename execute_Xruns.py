@@ -26,12 +26,12 @@ def get_fm_filepath_models(dir: str) -> list[str]:
     return sorted(models)
 
 
-def main(runs: int, filepath: str, solver_name: str, command: list[str]) -> tuple[str, list[str]]:
+def main(runs: int, filepath: str, solver_name: str, command: list[str]) -> None:
     # Get path and filename
     path, filename = os.path.split(filepath)
     filename = '.'.join(filename.split('.')[:-1])
 
-    results = []
+    #results = []
     print(f'Executing {runs} runs for model {filepath} with solver {solver_name}:')
     for i in range(1, runs + 1):
         print(f'{i} ', end='', flush=True)
@@ -42,19 +42,34 @@ def main(runs: int, filepath: str, solver_name: str, command: list[str]) -> tupl
                 print(result)
         except subprocess.TimeoutExpired as e:
             print(f'Timeout for model: {filepath}')
-            return ('', [';'.join([filename, TOOL_NAME, solver_name, 'timeout'])])
+            if i == 1:
+                header_file = header
+                with open(OUTPUT_FILE, 'w+', encoding='utf8') as file:
+                    file.write(f'{header_file}{os.linesep}')
+            else:
+                with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
+                    res = [';'.join([filename, TOOL_NAME, solver_name, 'timeout'])]
+                    file.write(f"{res}{os.linesep}")
+                return None
     
         # Parse result:
         result_split = [l for l in result.split(os.linesep) if l]
         header = result_split[-2]
         res = result_split[-1]
-        results.append(res)
+        if i == 1:
+            header_file = header
+            with open(OUTPUT_FILE, 'w+', encoding='utf8') as file:
+                file.write(f'{header_file}{os.linesep}')
+        else:
+            with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
+                file.write(f'{res}{os.linesep}')
 
-    print()
-    results_str = os.linesep.join(results)
-    print(results_str)
+    # print()
+    # results_str = os.linesep.join(results)
+    # print(results_str)
 
-    return (header, results)
+    # return (header, results)
+    return None
 
 
 if __name__ == '__main__':
@@ -84,25 +99,28 @@ if __name__ == '__main__':
             try:
                 # Glucose4 solver
                 solver_name = 'glucose4'
-                header, result = main(n_runs, filepath, solver_name, ['python', SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
-                if header_file is None:
-                    header_file = header
-                    with open(OUTPUT_FILE, 'w+', encoding='utf8') as file:
-                        file.write(f'{header_file}{os.linesep}')
-                with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
-                        file.write(f'{os.linesep.join(result)}{os.linesep}')
+                main(n_runs, filepath, solver_name, ['python', SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
+                # header, result = main(n_runs, filepath, solver_name, ['python', SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
+                # if header_file is None:
+                #     header_file = header
+                #     with open(OUTPUT_FILE, 'w+', encoding='utf8') as file:
+                #         file.write(f'{header_file}{os.linesep}')
+                # with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
+                #         file.write(f'{os.linesep.join(result)}{os.linesep}')
                 
                 # lingeling solver
                 solver_name = 'lingeling'
-                _, result = main(n_runs, filepath, solver_name, ['python', SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
-                with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
-                        file.write(f'{os.linesep.join(result)}{os.linesep}')
+                main(n_runs, filepath, solver_name, ['python', SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
+                # _, result = main(n_runs, filepath, solver_name, ['python', SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
+                # with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
+                #         file.write(f'{os.linesep.join(result)}{os.linesep}')
 
                 # minisat22 solver
                 solver_name = 'minisat22'
-                _, result = main(n_runs, filepath, solver_name, ['python', SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
-                with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
-                    file.write(f'{os.linesep.join(result)}{os.linesep}')
+                main(n_runs, filepath, solver_name, ['python', SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
+                # _, result = main(n_runs, filepath, solver_name, ['python', SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
+                # with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
+                #     file.write(f'{os.linesep.join(result)}{os.linesep}')
 
                 # sat4j solver (FeatureIDE)
                 path, filename = os.path.split(filepath)
@@ -110,9 +128,10 @@ if __name__ == '__main__':
                 filepath_dimacs = os.path.join(path, filename + '.dimacs')
                 print(f'DIMACS file: {filepath_dimacs}')
                 solver_name = 'sat4j'
-                _, result = main(n_runs, filepath_dimacs, solver_name, ['java', '-jar', SCRIPT_JAVA, filepath_dimacs])
-                with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
-                    file.write(f'{os.linesep.join(result)}{os.linesep}')
+                main(n_runs, filepath_dimacs, solver_name, ['java', '-jar', SCRIPT_JAVA, filepath_dimacs])
+                #_, result = main(n_runs, filepath_dimacs, solver_name, ['java', '-jar', SCRIPT_JAVA, filepath_dimacs])
+                # with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
+                #     file.write(f'{os.linesep.join(result)}{os.linesep}')
 
 
             except Exception as e:
