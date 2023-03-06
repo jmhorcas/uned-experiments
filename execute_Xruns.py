@@ -38,6 +38,8 @@ def main(runs: int, filepath: str, solver_name: str, command: list[str]) -> tupl
         try:
             process = subprocess.run(args=command, stdout=subprocess.PIPE, timeout=TIMEOUT) #, stderr=subprocess.DEVNULL)
             result = process.stdout.decode(locale.getlocale()[1])
+            if i == 1:
+                print(result)
         except subprocess.TimeoutExpired as e:
             print(f'Timeout for model: {filepath}')
             return ('', [';'.join([filename, TOOL_NAME, solver_name, 'timeout'])])
@@ -61,9 +63,10 @@ if __name__ == '__main__':
     parser.add_argument('-d', '--dir', dest='dir', type=str, required=True, help='Folder with the models in Dimacs (.cnf).')
     args = parser.parse_args()
 
+    analyzed_models = []
     # to avoid already analyzed models
-    with open(ALREADY_ANALYZED_RESULTS, 'r') as f:
-        analyzed_models = f.read()
+    # with open(ALREADY_ANALYZED_RESULTS, 'r') as f:
+    #     analyzed_models = f.read()
 
     n_runs = args.runs
     all_models = get_fm_filepath_models(args.dir)

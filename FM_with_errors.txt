@@ -1,6 +1,5 @@
 models/UNED/dimacs/klipper.dimacs
 models/UNED/dimacs/Kitten.dimacs
-models/UNED/dimacs/Linux-2.6.33.3-basic.dimacs  <-- otro error
 models/UNED/dimacs/snap.dimacs
 models/UNED/dimacs/ktap.dimacs
 models/UNED/dimacs/rnk.dimacs
@@ -21,13 +20,11 @@ models/UNED/dimacs/swupdate.dimacs
 models/UNED/dimacs/wireguard.dimacs
 models/UNED/dimacs/seabios-hppa.dimacs
 models/UNED/dimacs/Pingzee.dimacs
-models/UNED/dimacs/coreboot.dimacs <-- RuntimeTimeoutException for some executions (6) 
+models/UNED/dimacs/coreboot.dimacs
 models/UNED/dimacs/distortos.dimacs
 models/UNED/dimacs/halm.dimacs
-
 models/UNED/dimacs/frosted.dimacs
 models/UNED/dimacs/ESP8266.dimacs
 models/UNED/dimacs/FM-3.6.1-refined.dimacs
 models/UNED/dimacs/Linux-2.6.33.3-basic.dimacs
 
-ESP8266
