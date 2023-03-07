@@ -38,31 +38,33 @@ def main(runs: int, filepath: str, solver_name: str, command: list[str]) -> None
         try:
             process = subprocess.run(args=command, stdout=subprocess.PIPE, timeout=TIMEOUT) #, stderr=subprocess.DEVNULL)
             result = process.stdout.decode(locale.getlocale()[1])
-            if i == 1:
-                print(result)
-        except subprocess.TimeoutExpired as e:
-            print(f'Timeout for model: {filepath}')
-            if i == 1:
-                header_file = header
-                with open(OUTPUT_FILE, 'w+', encoding='utf8') as file:
-                    file.write(f'{header_file}{os.linesep}')
-            else:
-                with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
-                    res = [';'.join([filename, TOOL_NAME, solver_name, 'timeout'])]
-                    file.write(f"{res}{os.linesep}")
-                return None
-    
-        # Parse result:
-        result_split = [l for l in result.split(os.linesep) if l]
-        header = result_split[-2]
-        res = result_split[-1]
-        if i == 1:
-            header_file = header
-            with open(OUTPUT_FILE, 'w+', encoding='utf8') as file:
-                file.write(f'{header_file}{os.linesep}')
-        else:
+
+            # Parse result:
+            result_split = [l for l in result.split(os.linesep) if l]
+            header = result_split[-2]
+            res = result_split[-1]
+
             with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
                 file.write(f'{res}{os.linesep}')
+
+        except subprocess.TimeoutExpired as e:
+            print(f'Timeout for model: {filepath}')
+            with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
+                res = [';'.join([filename, TOOL_NAME, solver_name, 'timeout'])]
+                file.write(f"{res}{os.linesep}")
+            return None
+    
+        # Parse result:
+        # result_split = [l for l in result.split(os.linesep) if l]
+        # header = result_split[-2]
+        # res = result_split[-1]
+        # if i == 1:
+        #     header_file = header
+        #     with open(OUTPUT_FILE, 'w+', encoding='utf8') as file:
+        #         file.write(f'{header_file}{os.linesep}')
+        # else:
+        #     with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
+        #         file.write(f'{res}{os.linesep}')
 
     # print()
     # results_str = os.linesep.join(results)
