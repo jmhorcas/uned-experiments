@@ -21,7 +21,8 @@ class SATCoreDeadFeatures(Operation):
     def execute(self, model: PySATModel) -> 'SATCoreDeadFeatures':
         solver = Solver(name=self.solver_name)
         self.result = coredead_features(model, solver)
-        solver.delete()
+        if solver is not None:
+            solver.delete()
         return self
         
 
