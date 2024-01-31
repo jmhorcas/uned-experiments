@@ -8,6 +8,7 @@ import subprocess
 import locale
 
 
+PYTHON = 'python3'
 TOOL_NAME = 'Flama'
 OUTPUT_FILE = 'result2.csv'
 ALREADY_ANALYZED_RESULTS = 'result.csv'
@@ -101,7 +102,7 @@ if __name__ == '__main__':
             try:
                 # Glucose4 solver
                 solver_name = 'glucose4'
-                main(n_runs, filepath, solver_name, ['python', SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
+                main(n_runs, filepath, solver_name, [PYTHON, SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
                 # header, result = main(n_runs, filepath, solver_name, ['python', SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
                 # if header_file is None:
                 #     header_file = header
@@ -112,14 +113,14 @@ if __name__ == '__main__':
                 
                 # lingeling solver
                 solver_name = 'lingeling'
-                main(n_runs, filepath, solver_name, ['python', SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
+                main(n_runs, filepath, solver_name, [PYTHON, SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
                 # _, result = main(n_runs, filepath, solver_name, ['python', SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
                 # with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
                 #         file.write(f'{os.linesep.join(result)}{os.linesep}')
 
                 # minisat22 solver
                 solver_name = 'minisat22'
-                main(n_runs, filepath, solver_name, ['python', SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
+                main(n_runs, filepath, solver_name, [PYTHON, SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
                 # _, result = main(n_runs, filepath, solver_name, ['python', SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
                 # with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
                 #     file.write(f'{os.linesep.join(result)}{os.linesep}')
