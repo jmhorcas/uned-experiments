@@ -4,7 +4,7 @@ import argparse
 from flamapy.metamodels.fm_metamodel.transformations import UVLReader
 
 from flamapy.metamodels.pysat_metamodel.transformations import FmToPysat, DimacsReader
-from flamapy.metamodels.pysat_metamodel.operations import SATCoreDeadFeatures
+from operations.pysat_coredead_features import SATCoreDeadFeatures
 
 from utils import timer, memory_profiler
 
