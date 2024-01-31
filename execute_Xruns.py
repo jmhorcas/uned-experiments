@@ -10,8 +10,8 @@ import locale
 
 PYTHON = 'python3'
 TOOL_NAME = 'Flama'
-OUTPUT_FILE = 'result2.csv'
-ALREADY_ANALYZED_RESULTS = 'result.csv'
+OUTPUT_FILE = 'result_2024.csv'
+ALREADY_ANALYZED_RESULTS = 'result_analyzed_2024.csv'
 SCRIPT_PYTHON = 'main_sat_analysis.py'
 SCRIPT_JAVA = 'fide_sat_analysis.jar'
 COLUMNS_VALUES = [3]
@@ -39,7 +39,7 @@ def main(runs: int, filepath: str, solver_name: str, command: list[str]) -> None
         try:
             process = subprocess.run(args=command, stdout=subprocess.PIPE, timeout=TIMEOUT) #, stderr=subprocess.DEVNULL)
             result = process.stdout.decode(locale.getlocale()[1])
-
+            print(result)
             # Parse result:
             result_split = [l for l in result.split(os.linesep) if l]
             header = result_split[-2]
