@@ -21,6 +21,7 @@ class SATCoreDeadFeatures(Operation):
     def execute(self, model: PySATModel) -> 'SATCoreDeadFeatures':
         solver = Solver(name=self.solver_name)
         self.result = coredead_features(model, solver)
+        solver.delete()
         return self
         
 
@@ -35,5 +36,4 @@ def coredead_features(model: PySATModel, solver: Solver) -> tuple[list[Any], lis
                 core_features.append(variable[0])
             if not solver.solve(assumptions=[variable[1]]):
                 dead_features.append(variable[0])
-    solver.delete()
     return (core_features, dead_features)
