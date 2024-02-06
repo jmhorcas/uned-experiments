@@ -34,7 +34,8 @@ def main(dir: str, output_dir: str):
                 if not os.path.exists(output_filepath):
                     # Load the feature model
                     feature_model = UVLReader(fm_filepath).transform()
-
+                    print(f'  |-> |F| = {len(feature_model.get_features())}, |CTCs| = {len(feature_model.get_constraints())}')
+                    
                     # Convert to CNF (throught the PySAT metamodel)
                     sat_model = FmToPysat(feature_model).transform()
 

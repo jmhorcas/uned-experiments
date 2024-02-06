@@ -1,8 +1,6 @@
 import os
 import argparse
 
-from flamapy.metamodels.fm_metamodel.transformations import UVLReader
-
 from flamapy.metamodels.pysat_metamodel.transformations import FmToPysat, DimacsReader
 from operations.pysat_coredead_features import SATCoreDeadFeatures
 
@@ -34,14 +32,7 @@ def main(fm_filepath: str, solver_name: str) -> None:
     path, filename = os.path.split(fm_filepath)
     filename = '.'.join(filename.split('.')[:-1])
 
-    # Load the feature model
-    if fm_filepath.endswith('.uvl'):
-        feature_model = UVLReader(fm_filepath).transform()
-
-        # Create the BDD from the FM
-        sat_model = FmToPysat(feature_model).transform()
-    else:
-        sat_model = DimacsReader(fm_filepath).transform()
+    sat_model = DimacsReader(fm_filepath).transform()
 
     # Core features
     with timer.Timer(name='Time', logger=None):

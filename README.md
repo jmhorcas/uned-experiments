@@ -23,8 +23,6 @@ Experiments with SAT in Flama
 
     `git clone https://github.com/jmhorcas/uned-experiments.git`
 
-    `cd fm_solver`
-
 3. Create a virtual environment: `python3 -m venv env`
 
 4. Activate the environment: 
