@@ -22,7 +22,10 @@ class SATCoreDeadFeatures(Operation):
         solver = Solver(name=self.solver_name)
         self.result = coredead_features(model, solver)
         if solver is not None:
-            solver.delete()
+            try:
+                solver.delete()
+            except:
+                pass
         return self
         
 
