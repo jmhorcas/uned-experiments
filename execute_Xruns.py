@@ -101,8 +101,8 @@ if __name__ == '__main__':
         else:
             try:
                 # Glucose4 solver
-                solver_name = 'glucose4'
-                main(n_runs, filepath, solver_name, [PYTHON, SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
+                #solver_name = 'glucose4'
+                #main(n_runs, filepath, solver_name, [PYTHON, SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
                 # header, result = main(n_runs, filepath, solver_name, ['python', SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
                 # if header_file is None:
                 #     header_file = header
@@ -112,8 +112,8 @@ if __name__ == '__main__':
                 #         file.write(f'{os.linesep.join(result)}{os.linesep}')
                 
                 # lingeling solver
-                solver_name = 'lingeling'
-                main(n_runs, filepath, solver_name, [PYTHON, SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
+                #solver_name = 'lingeling'
+                #main(n_runs, filepath, solver_name, [PYTHON, SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
                 # _, result = main(n_runs, filepath, solver_name, ['python', SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
                 # with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
                 #         file.write(f'{os.linesep.join(result)}{os.linesep}')
@@ -125,13 +125,18 @@ if __name__ == '__main__':
                 # with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
                 #     file.write(f'{os.linesep.join(result)}{os.linesep}')
 
+                # minisat22 solver
+                solver_name = 'cadical'
+                main(n_runs, filepath, solver_name, [PYTHON, SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
+
                 # sat4j solver (FeatureIDE)
-                path, filename = os.path.split(filepath)
-                filename = '.'.join(filename.split('.')[:-1])
-                filepath_dimacs = os.path.join(path, filename + '.dimacs')
-                print(f'DIMACS file: {filepath_dimacs}')
+                #path, filename = os.path.split(filepath)
+                #filename = '.'.join(filename.split('.')[:-1])
+                #filepath_dimacs = os.path.join(path, filename + '.dimacs')
+                #print(f'DIMACS file: {filepath_dimacs}')
                 solver_name = 'sat4j'
-                main(n_runs, filepath_dimacs, solver_name, ['java', '-jar', SCRIPT_JAVA, filepath_dimacs])
+                #main(n_runs, filepath_dimacs, solver_name, ['java', '-jar', SCRIPT_JAVA, filepath_dimacs])
+                main(n_runs, filepath, solver_name, ['java', '-jar', SCRIPT_JAVA, filepath])
                 #_, result = main(n_runs, filepath_dimacs, solver_name, ['java', '-jar', SCRIPT_JAVA, filepath_dimacs])
                 # with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
                 #     file.write(f'{os.linesep.join(result)}{os.linesep}')
