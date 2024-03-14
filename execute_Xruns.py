@@ -100,51 +100,51 @@ if __name__ == '__main__':
         if filename in analyzed_models:
             print(f'Skypped model.')
         else:
-            try:
-                # cadical solver
-                solver_name = 'cadical153'
-                main(n_runs, filepath, solver_name, [PYTHON, SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
-                
-                # Glucose4 solver
-                #solver_name = 'glucose4'
-                #main(n_runs, filepath, solver_name, [PYTHON, SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
-                # header, result = main(n_runs, filepath, solver_name, ['python', SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
-                # if header_file is None:
-                #     header_file = header
-                #     with open(OUTPUT_FILE, 'w+', encoding='utf8') as file:
-                #         file.write(f'{header_file}{os.linesep}')
-                # with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
-                #         file.write(f'{os.linesep.join(result)}{os.linesep}')
-                
-                # lingeling solver
-                #solver_name = 'lingeling'
-                #main(n_runs, filepath, solver_name, [PYTHON, SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
-                # _, result = main(n_runs, filepath, solver_name, ['python', SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
-                # with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
-                #         file.write(f'{os.linesep.join(result)}{os.linesep}')
+            #try:
+            # cadical solver
+            solver_name = 'cadical153'
+            main(n_runs, filepath, solver_name, [PYTHON, SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
+            
+            # Glucose4 solver
+            #solver_name = 'glucose4'
+            #main(n_runs, filepath, solver_name, [PYTHON, SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
+            # header, result = main(n_runs, filepath, solver_name, ['python', SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
+            # if header_file is None:
+            #     header_file = header
+            #     with open(OUTPUT_FILE, 'w+', encoding='utf8') as file:
+            #         file.write(f'{header_file}{os.linesep}')
+            # with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
+            #         file.write(f'{os.linesep.join(result)}{os.linesep}')
+            
+            # lingeling solver
+            #solver_name = 'lingeling'
+            #main(n_runs, filepath, solver_name, [PYTHON, SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
+            # _, result = main(n_runs, filepath, solver_name, ['python', SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
+            # with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
+            #         file.write(f'{os.linesep.join(result)}{os.linesep}')
 
-                # minisat22 solver
-                solver_name = 'minisat22'
-                main(n_runs, filepath, solver_name, [PYTHON, SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
-                # _, result = main(n_runs, filepath, solver_name, ['python', SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
-                # with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
-                #     file.write(f'{os.linesep.join(result)}{os.linesep}')
+            # minisat22 solver
+            solver_name = 'minisat22'
+            main(n_runs, filepath, solver_name, [PYTHON, SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
+            # _, result = main(n_runs, filepath, solver_name, ['python', SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
+            # with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
+            #     file.write(f'{os.linesep.join(result)}{os.linesep}')
 
-                # sat4j solver (FeatureIDE)
-                #path, filename = os.path.split(filepath)
-                #filename = '.'.join(filename.split('.')[:-1])
-                #filepath_dimacs = os.path.join(path, filename + '.dimacs')
-                #print(f'DIMACS file: {filepath_dimacs}')
-                solver_name = 'sat4j'
-                #main(n_runs, filepath_dimacs, solver_name, ['java', '-jar', SCRIPT_JAVA, filepath_dimacs])
-                main(n_runs, filepath, solver_name, ['java', '-jar', SCRIPT_JAVA, filepath])
-                #_, result = main(n_runs, filepath_dimacs, solver_name, ['java', '-jar', SCRIPT_JAVA, filepath_dimacs])
-                # with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
-                #     file.write(f'{os.linesep.join(result)}{os.linesep}')
+            # sat4j solver (FeatureIDE)
+            #path, filename = os.path.split(filepath)
+            #filename = '.'.join(filename.split('.')[:-1])
+            #filepath_dimacs = os.path.join(path, filename + '.dimacs')
+            #print(f'DIMACS file: {filepath_dimacs}')
+            solver_name = 'sat4j'
+            #main(n_runs, filepath_dimacs, solver_name, ['java', '-jar', SCRIPT_JAVA, filepath_dimacs])
+            main(n_runs, filepath, solver_name, ['java', '-jar', SCRIPT_JAVA, filepath])
+            #_, result = main(n_runs, filepath_dimacs, solver_name, ['java', '-jar', SCRIPT_JAVA, filepath_dimacs])
+            # with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
+            #     file.write(f'{os.linesep.join(result)}{os.linesep}')
 
 
-            except Exception as e:
-                print(f'Error in model: {filepath}')
-                print(e)
-                traceback.print_exc()
+            #except Exception as e:
+            #    print(f'Error in model: {filepath}')
+            #    print(e)
+            #    traceback.print_exc()
     
