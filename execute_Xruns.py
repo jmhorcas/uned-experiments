@@ -102,7 +102,7 @@ if __name__ == '__main__':
         else:
             try:
                 # cadical solver
-                solver_name = 'cadical'
+                solver_name = 'cadical153'
                 main(n_runs, filepath, solver_name, [PYTHON, SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
                 
                 # Glucose4 solver
