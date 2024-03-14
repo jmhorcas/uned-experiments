@@ -3,6 +3,7 @@ Example of execution:
     python execute_Xruns.py -r 30 -s main_sat_analysis.py -a "-fm fm_models/fms/Pizzas_complex.uvl -s g3"
 """
 import os
+import traceback
 import argparse
 import subprocess
 import locale
@@ -100,6 +101,10 @@ if __name__ == '__main__':
             print(f'Skypped model.')
         else:
             try:
+                # cadical solver
+                solver_name = 'cadical'
+                main(n_runs, filepath, solver_name, [PYTHON, SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
+                
                 # Glucose4 solver
                 #solver_name = 'glucose4'
                 #main(n_runs, filepath, solver_name, [PYTHON, SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
@@ -125,10 +130,6 @@ if __name__ == '__main__':
                 # with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
                 #     file.write(f'{os.linesep.join(result)}{os.linesep}')
 
-                # minisat22 solver
-                solver_name = 'cadical'
-                main(n_runs, filepath, solver_name, [PYTHON, SCRIPT_PYTHON, '-fm', filepath, '-s', solver_name])
-
                 # sat4j solver (FeatureIDE)
                 #path, filename = os.path.split(filepath)
                 #filename = '.'.join(filename.split('.')[:-1])
@@ -144,5 +145,6 @@ if __name__ == '__main__':
 
             except Exception as e:
                 print(f'Error in model: {filepath}')
-                print(e.with_traceback())
+                print(e)
+                traceback.print_exc()
     
