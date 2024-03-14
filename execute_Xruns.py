@@ -144,5 +144,5 @@ if __name__ == '__main__':
 
             except Exception as e:
                 print(f'Error in model: {filepath}')
-                print(e)
+                print(e.with_traceback())
     
