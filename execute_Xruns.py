@@ -84,8 +84,8 @@ if __name__ == '__main__':
 
     analyzed_models = []
     # to avoid already analyzed models
-    # with open(ALREADY_ANALYZED_RESULTS, 'r') as f:
-    #     analyzed_models = f.read()
+    with open(ALREADY_ANALYZED_RESULTS, 'r') as f:
+        analyzed_models = f.read()
 
     n_runs = args.runs
     all_models = get_fm_filepath_models(args.dir)
