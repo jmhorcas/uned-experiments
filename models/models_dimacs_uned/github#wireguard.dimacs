@@ -1,9 +1,0 @@
-p cnf      3          5
-c 1 tristate_WIREGUARD
-c 2 tristate_WIREGUARD_M
-c 3 bool_WIREGUARD_DEBUG
--1 0
--2 0
--1 -2 0
--2 0
-1 2 -3 0
