@@ -38,7 +38,7 @@ def main(runs: int, filepath: str, solver_name: str, command: list[str]) -> None
     for i in range(1, runs + 1):
         print(f'{i} ', end='', flush=True)
         try:
-            process = subprocess.run(args=command, stdout=subprocess.PIPE, timeout=TIMEOUT, subprocess.HIGH_PRIORITY_CLASS) #, stderr=subprocess.DEVNULL)
+            process = subprocess.run(args=command, stdout=subprocess.PIPE, timeout=TIMEOUT) #, stderr=subprocess.DEVNULL)
             result = process.stdout.decode(locale.getlocale()[1])
             print(result)
             # Parse result:
