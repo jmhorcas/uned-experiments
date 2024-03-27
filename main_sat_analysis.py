@@ -44,7 +44,7 @@ def main(fm_filepath: str, solver_name: str) -> None:
 
     print()
     header = ';'.join(HEADER)
-    values = ';'.join([filename, TOOL_NAME, solver_name, time_seconds])
+    values = ';'.join([filename, TOOL_NAME, solver_name, str(len(core_features)), str(len(dead_features)), time_seconds])
     print(header)
     print(values)
 

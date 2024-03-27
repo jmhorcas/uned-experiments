@@ -48,11 +48,11 @@ public class Main {
 			System.out.println("Core features: " + cores.size() + cores);
 			System.out.println("Dead features: " + dead.size() + dead);
 			double seconds = elapsedTime / 1e9;
-			System.out.println("Model;Tool;SAT-solver;Seconds");
+			System.out.println("Model;Tool;SAT-solver;Cores;Deads;Seconds");
 			if (timeout) {
-				System.out.println(filename + ";FeatureIDE;Sat4j;timeout");
+				System.out.println(filename + ";FeatureIDE;Sat4j;-1;-1;timeout");
 			} else {
-				System.out.println(filename + ";FeatureIDE;Sat4j;" + seconds);
+				System.out.println(filename + ";FeatureIDE;Sat4j;" + cores.size() + ";" + dead.size() + ";" + seconds);
 			}
 			
 		} else {

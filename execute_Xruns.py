@@ -52,7 +52,7 @@ def main(runs: int, filepath: str, solver_name: str, command: list[str]) -> None
         except subprocess.TimeoutExpired as e:
             print(f'Timeout for model: {filepath}')
             with open(OUTPUT_FILE, 'a', encoding='utf8') as file:
-                res = [';'.join([filename, TOOL_NAME, solver_name, 'timeout'])]
+                res = [';'.join([filename, TOOL_NAME, solver_name, '-1', '-1', 'timeout'])]
                 file.write(f"{res}{os.linesep}")
             return None
         except Exception as e:
