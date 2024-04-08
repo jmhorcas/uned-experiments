@@ -6,6 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import de.ovgu.featureide.fm.core.FeatureModelAnalyzer;
+import de.ovgu.featureide.fm.core.analysis.cnf.CNF;
+import de.ovgu.featureide.fm.core.analysis.cnf.LiteralSet;
+import de.ovgu.featureide.fm.core.analysis.cnf.Variables;
+import de.ovgu.featureide.fm.core.analysis.cnf.analysis.CoreDeadAnalysis;
 import de.ovgu.featureide.fm.core.analysis.cnf.formula.FMAnalyzerCreator;
 import de.ovgu.featureide.fm.core.analysis.cnf.formula.FeatureModelFormula;
 import de.ovgu.featureide.fm.core.analysis.cnf.solver.RuntimeTimeoutException;
@@ -14,6 +18,7 @@ import de.ovgu.featureide.fm.core.base.IFeatureModel;
 import de.ovgu.featureide.fm.core.init.FMCoreLibrary;
 import de.ovgu.featureide.fm.core.init.LibraryManager;
 import de.ovgu.featureide.fm.core.io.manager.FeatureModelManager;
+import de.ovgu.featureide.fm.core.job.LongRunningWrapper;
 
 public class Main {
 
@@ -28,16 +33,20 @@ public class Main {
 		if (featureModel != null) {
 			FeatureModelFormula formula = new FeatureModelFormula(featureModel);
 			
-			long startTime = System.nanoTime();
+			boolean timeout = false;
 			List<IFeature> cores = new ArrayList<>();
 			List<IFeature> dead = new ArrayList<>();
-			boolean timeout = false;
+			
+			CNF cnf = formula.getCNF();
+			Variables variables = cnf.getVariables();
+			
+			long startTime = System.nanoTime();
 			try {
-				final FeatureModelAnalyzer analyzer = formula.getAnalyzer();
-				//analyzer.analyzeFeatureModel(null);
-				//System.out.println("Feature model is " + (analyzer.isValid(null) ? "not " : "") + "void");
-				cores = analyzer.getCoreFeatures(null);
-				dead = analyzer.getDeadFeatures(null);
+				CoreDeadAnalysis analysis = new CoreDeadAnalysis(cnf);
+				analysis.setTimeout(60_000);
+				final LiteralSet core = LongRunningWrapper.runMethod(analysis);
+				final List<String> coreFeatureNames = variables.convertToString(core, true, false, false);
+				final List<String> deadFeatureNames = variables.convertToString(core, false, true, false); 
 			} catch (RuntimeTimeoutException e) {
 				e.printStackTrace();
 				timeout = true;
